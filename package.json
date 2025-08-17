@@ -1,0 +1,20 @@
+{
+  "name": "PetCare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:styles": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "start": "concurrently \"pnpm run build:styles\" \"browser-sync start --server --files 'src/index.html,src/output.css' --no-open\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.0",
+    "tailwindcss": "^4.1.12"
+  }
+}
