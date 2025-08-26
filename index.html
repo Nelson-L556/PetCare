@@ -4,9 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
+  <link rel="shortcut icon" href="src/img/logo.png" type="image/x-icon">
   <title>PetCare</title>
 </head>
-<body class="bg-orange-200 p-6">
-  <h1 class="text-3xl font-bold text-green-600">¡Hola Tailwind con recarga automática!</h1>
+<body class="text-blanco bg-pri">
+  <header class="bg-primary" >
+    <nav class="flex items-center justify-around gap-4 mb-2">
+      <div>
+      </div>
+      
+      <a href="">
+        <img src="src/img/logo.png" class="size-30" alt="Imagen del logo de PetCare">
+      </a>
+
+      <div class="hidden md:flex justify-around w-full ">
+        <a href="">Inicio</a>
+        <a href="">Nosotros</a>
+        <a href="">Informacion</a>
+        <a href="">Servicios</a>
+      </div>
+
+      <div>
+        <a href="">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-10 md:hidden" x="0px" y="0px " viewBox="0 0 48 48">
+          <path fill="#607D8B" d="M6 22H42V26H6zM6 10H42V14H6zM6 34H42V38H6z"></path>
+        </svg>
+        </a>
+      </div>
+    </nav>
+
+    <div class="bg-primary size-full p-2 flex flex-col md:flex-row lg:grid lg:grid-cols-3">
+      <div class="flex flex-col justify-center w-full md:items-center">
+        <h1 class="font-bold text-3xl text-center m-1 mb-5">Cuidado y amor para cada mascota</h1>
+        <p class="mr-1.5 ml-2 text-2xl md:mb-5">En PetCare, sabemos que cada mascota es especial. Ofrecemos atención profesional y cercana para garantizar su bienestar y darte tranquilidad a ti como dueño</p>
+        <a href="#" class="w-2x1 bg-blanco text-center rounded-full mt-3 p-2 text-black font-bold shadow-2xs transition-all hover:text-blanco hover:bg-secondary md:w-100">Agenda tu cita</a>
+      </div>
+
+      <div class="lg:col-span-2 lg:flex lg:items-center lg:justify-center">
+        <img src="src/img/logo.png" alt="">
+      </div>
+    </div>
+  </header>
 </body>
 </html>
