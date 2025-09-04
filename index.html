@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="src/img/logo.png" type="image/x-icon">
   <title>PetCare</title>
 </head>
-<body class="text-blanco bg-pri">
+<body class="text-blanco bg-primary-light">
 
   <!-- HEADER -->
   <header class="bg-primary">
@@ -17,10 +17,10 @@
         <img src="src/img/logo.png" class="size-30" alt="Imagen del logo de PetCare">
       </a>
       <div class="hidden md:flex justify-around w-full font-bold text-1">
-        <a href="#">Inicio</a>
-        <a href="#">Nosotros</a>
-        <a href="#">Informacion</a>
-        <a href="#">Servicios</a>
+        <a href="#" class="font-titulo">Inicio</a>
+        <a href="#" class="font-titulo">Nosotros</a>
+        <a href="#" class="font-titulo">Informacion</a>
+        <a href="#" class="font-titulo">Servicios</a>
       </div>
       <div>
         <a href="">
@@ -34,13 +34,12 @@
     <div class="bg-primary size-full p-2 flex flex-col md:flex-row lg:grid lg:grid-cols-3 pb-5">
       <!-- Texto principal -->
       <div class="flex flex-col justify-center w-full md:items-center md:ml-5">
-        <h1 class="font-bold text-4xl text-center m-1 mb-5">Cuidado y amor para cada mascota</h1>
+        <h1 class="font-bold text-4xl text-center m-1 mb-5 font-titulo">Cuidado y amor para cada mascota</h1>
         <p class="mr-1.5 ml-2 text-2xl md:mb-5">
           En PetCare, sabemos que cada mascota es especial. Ofrecemos atención profesional y cercana para garantizar su bienestar y darte tranquilidad a ti como dueño
         </p>
-        <a href="#" class="w-2x1 bg-blanco text-center rounded-full mt-3 p-2 text-black font-bold shadow-2xs transition-all hover:text-blanco hover:bg-secondary md:w-100">
-          Agenda tu cita
-        </a>
+        <button class="bg-blanco text-black font-bold px-6 py-3 rounded-full shadow-md
+        hover:bg-secondary hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out mt-7 w-full">Agenda tu cita</button>
       </div>
 
       <!-- Imagen con fondo skew -->
@@ -53,66 +52,86 @@
     </div>
   </header>
 
-<section class="md:m-10">
-  <h2 class="text-primary font-black text-3xl text-center m-10 md:m-5">Lo que distingue PetCare</h2>
+<!-- SECTION -->
+
+<section class="md:m-10">c
+  <h2 class="text-primary font-titulo font-black text-3xl text-center m-10 md:m-5">Lo que distingue PetCare</h2>
 
   <div class="flex flex-col items-center gap-5 md:grid md:grid-cols-3 md:gap-6 mt-10">
 
     <!-- CARD 1 -->
-    <div class="relative w-70 flex flex-col items-center rounded-lg h-full md:w-10/12 lg:w-10/12 lg:mx-auto">
+    <div class="relative w-70 flex flex-col items-center rounded-lg h-full md:w-10/12 lg:w-10/12 lg:mx-auto group">
       <!-- Glow externo -->
       <div class="absolute -inset-1 rounded-lg bg-secondary blur-2xl opacity-50 z-0
                   md:-inset-2 md:opacity-60
-                  lg:-inset-3 lg:blur-3xl lg:opacity-70"></div>
+                  lg:-inset-0 lg:blur-3xl lg:opacity-70"></div>
 
       <!-- Contenedor interno -->
-      <div class="relative z-10 bg-white flex flex-col h-full rounded-lg shadow-lg">
-        <img src="src/img/header.png" alt="Atención personalizada" class="w-full rounded-t-lg">
+      <div class="relative z-10 bg-white flex flex-col rounded-lg shadow-lg overflow-hidden md:h-70 lg:size-80">
+        <img src="src/img/card2.avif" alt="Atención personalizada"
+             class="w-full rounded-t-lg md:block md:group-hover:opacity-0 md:transition-all md:duration-500 md:ease-in-out md:h-40 md:group-hover:h-0 h-full">
 
-        <div class="bg-secondary flex flex-col items-center p-5 rounded-b-lg mt-auto">
-          <h3 class="font-bold text-2xl mb-3 text-center">Atención personalizada</h3>
-          <p class="text-xl text-balance text-center">
-            Cada mascota es única, por eso diseñamos un cuidado adaptado a su edad, carácter y necesidades específicas. Queremos que cada visita sea una experiencia positiva tanto para tu mascota como para ti
+        <div class="bg-secondary flex flex-col items-center p-5 rounded-b-lg mt-auto h-full overflow-hidden">
+          <h3 class="font-bold font-titulo text-2xl mb-3 text-center">Atención personalizada</h3>
+          <p class="text-xl text-balance text-center md:text-base lg:text-xl
+                    md:opacity-0 md:max-h-0 md:overflow-hidden
+                    md:group-hover:opacity-100 md:group-hover:max-h-96
+                    md:transition-all md:duration-500 md:ease-in-out">
+            Cada mascota es única, por eso diseñamos cuidados adaptados a su edad, carácter y necesidades.
           </p>
         </div>
       </div>
     </div>
 
     <!-- CARD 2 -->
-    <div class="relative w-70 flex flex-col items-center rounded-lg h-full md:w-10/12 lg:w-10/12 lg:mx-auto">
+    <div class="relative w-70 flex flex-col items-center rounded-lg h-full md:w-10/12 lg:w-10/12 lg:mx-auto group">
       <!-- Glow externo -->
       <div class="absolute -inset-1 rounded-lg bg-secondary blur-2xl opacity-50 z-0
                   md:-inset-2 md:opacity-60
                   lg:-inset-3 lg:blur-3xl lg:opacity-70"></div>
 
-      <!-- Contenedor interno -->
-      <div class="relative z-10 bg-white flex flex-col h-full rounded-lg shadow-lg">
-        <img src="src/img/header.png" alt="Atención personalizada" class="w-full rounded-t-lg">
+      <!-- Contenedor interno con altura fija -->
+      <div class="relative z-10 bg-white flex flex-col rounded-lg shadow-lg overflow-hidden   md:h-70 lg:size-80">
 
-        <div class="bg-secondary flex flex-col items-center p-5 rounded-b-lg mt-auto">
-          <h3 class="font-bold text-2xl mb-3 text-center">Atención personalizada</h3>
-          <p class="text-xl text-balance text-center">
-            Cada mascota es única, por eso diseñamos un cuidado adaptado a su edad, carácter y necesidades específicas. Queremos que cada visita sea una experiencia positiva tanto para tu mascota como para ti
+        <!-- Imagen: visible en mobile y MD+, desaparece al hover MD+ -->
+        <img src="src/img/card1.avif" alt="Salud Preventiva"
+             class="w-full rounded-t-lg md:block md:group-hover:opacity-0 md:transition-all md:duration-500 md:ease-in-out md:h-40 md:group-hover:h-0">
+
+        <!-- Contenido -->
+        <div class="bg-secondary flex flex-col items-center p-5 rounded-b-lg mt-auto h-full overflow-hidden">
+          <!-- Título siempre visible -->
+          <h3 class="font-bold font-titulo text-2xl mb-3 text-center">Salud Preventiva</h3>
+
+          <!-- Texto: oculto por defecto en MD+, aparece al hover -->
+          <p class="text-xl text-balance text-center md:text-base lg:text-xl
+                    md:opacity-0 md:max-h-0 md:overflow-hidden
+                    md:group-hover:opacity-100 md:group-hover:max-h-96
+                    md:transition-all md:duration-500 md:ease-in-out">
+            Cada mascota recibe revisiones periódicas, vacunación y orientación nutricional adaptada a sus necesidades. Queremos detectar cualquier problema a tiempo.
           </p>
         </div>
       </div>
     </div>
 
     <!-- CARD 3 -->
-    <div class="relative w-70 flex flex-col items-center rounded-lg h-full md:w-10/12 lg:w-10/12 lg:mx-auto">
+    <div class="relative w-70 flex flex-col items-center rounded-lg h-full md:w-10/12 lg:w-10/12 lg:mx-auto group mb-10 md:mb-0">
       <!-- Glow externo -->
       <div class="absolute -inset-1 rounded-lg bg-secondary blur-2xl opacity-50 z-0
                   md:-inset-2 md:opacity-60
                   lg:-inset-3 lg:blur-3xl lg:opacity-70"></div>
 
       <!-- Contenedor interno -->
-      <div class="relative z-10 bg-white flex flex-col h-full rounded-lg shadow-lg">
-        <img src="src/img/header.png" alt="Atención personalizada" class="w-full rounded-t-lg">
+      <div class="relative z-10 bg-white flex flex-col rounded-lg shadow-lg overflow-hidden md:h-70  lg:size-80">
+        <img src="src/img/card3.avif" alt="Amigos y Comunidad"
+             class="w-full rounded-t-lg md:block md:group-hover:opacity-0 md:transition-all md:duration-500 md:ease-in-out md:h-40 md:group-hover:h-0">
 
-        <div class="bg-secondary flex flex-col items-center p-5 rounded-b-lg mt-auto">
-          <h3 class="font-bold text-2xl mb-3 text-center">Atención personalizada</h3>
-          <p class="text-xl text-balance text-center">
-            Cada mascota es única, por eso diseñamos un cuidado adaptado a su edad, carácter y necesidades específicas. Queremos que cada visita sea una experiencia positiva tanto para tu mascota como para ti
+        <div class="bg-secondary flex flex-col items-center p-5 rounded-b-lg mt-auto h-full overflow-hidden">
+          <h3 class="font-bold font-titulo text-2xl mb-3 text-center">Amigos y Comunidad</h3>
+          <p class="text-xl text-balance text-center md:text-base lg:text-xl
+                    md:opacity-0 md:max-h-0 md:overflow-hidden
+                    md:group-hover:opacity-100 md:group-hover:max-h-96
+                    md:transition-all md:duration-500 md:ease-in-out">
+            Fomentamos la interacción entre mascotas y dueños mediante eventos, talleres y actividades grupales.
           </p>
         </div>
       </div>
@@ -121,6 +140,26 @@
   </div>
 </section>
 
+<section class="bg-primary">
+  <div>
+    <div class="flex flex-col items-center justify-center place-items-center md:grid grid-cols-3">
+      <div class="relative z-0 lg:col-span-1 xl:col-span-2 lg:flex lg:items-center lg:justify-center mt-10
+                  before:content-[''] before:absolute before:inset-0
+                  before:block xl:before:size-90 before:rounded-full
+                  before:bg-secondary before:m-auto before:-z-10 md:mt-0">
+        <img src="src/img/section.png" class="relative z-10  xl:size-1/2 rounded-full" alt="Cuidando a un perro">
+      </div>
+
+      <div class="flex flex-col items-center p-5 md:col-span-2 xl:col-span-1">
+        <h2 class="text-2xl font-black font-titulo text-center mb-5">Cuidamos a quienes más quieres</h2>
+        <p class="lg:text-xl">Entendemos lo especial que es tu mascota y los retos que puede implicar su cuidado diario, desde la alimentación adecuada, visitas al veterinario, hasta la necesidad de juegos y compañía. En PetCare ofrecemos un servicio integral que incluye evaluaciones de salud, recomendaciones personalizadas y acompañamiento experto para garantizar el bienestar de tu mejor amigo.
+        Nuestro equipo está conformado por profesionales apasionados por el cuidado animal y comprometidos con cada familia. Si buscas confianza y resultados, agenda hoy con PetCare.</p>
+        <button class="bg-blanco text-black font-semibold px-6 py-3 rounded-full shadow-md
+        hover:bg-secondary hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out mt-7 w-full">Comienza con PetCare</button>
+      </div>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
