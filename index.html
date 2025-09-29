@@ -10,28 +10,36 @@
 <body class="text-blanco bg-primary-light">
 
   <!-- HEADER -->
-  <header class="bg-primary">
-    <nav class="flex items-center justify-around gap-4 mb-2">
-      <div></div>
-      <a href="">
-        <img src="src/img/logo.png" class="size-30" alt="Imagen del logo de PetCare">
-      </a>
-      <div class="hidden md:flex justify-around w-full font-bold text-1">
-        <a href="#" class="font-titulo">Inicio</a>
-        <a href="#" class="font-titulo">Nosotros</a>
-        <a href="#" class="font-titulo">Informacion</a>
-        <a href="#" class="font-titulo">Servicios</a>
-      </div>
-      <div>
-        <a href="">
-          <svg xmlns="http://www.w3.org/2000/svg" class="size-10 md:hidden" x="0px" y="0px" viewBox="0 0 48 48">
-            <path fill="#607D8B" d="M6 22H42V26H6zM6 10H42V14H6zM6 34H42V38H6z"></path>
-          </svg>
-        </a>
-      </div>
-    </nav>
+  <header class="bg-primary relative">
+   <nav>
+<div class="header top-0 left-0 flex items-center justify-between font-bold text-1 z-50">
+    <!-- Logo -->
+    <div>
+      <img src="src/img/logo.png" class="size-30" alt="Logo">
+    </div>
 
-    <div class="bg-primary size-full p-2 flex flex-col md:flex-row lg:grid lg:grid-cols-3 pb-5">
+    <!-- Enlaces -->
+    <div class="enlaces hidden md:flex items-center gap-5 md:flex-row flex-col justify-center w-full md:h-auto md:w-auto md:bg-transparent">
+      <a href="#" class="font-titulo">Inicio</a>
+      <a href="#" class="font-titulo">Nosotros</a>
+      <a href="#" class="font-titulo">Información</a>
+      <a href="#" class="font-titulo">Servicios</a>
+    </div>
+
+    <!-- Iconos menú -->
+    <div>
+      <svg class="size-15 menu cursor-pointer md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z"/>
+      </svg>
+      <svg class="size-15 menuCerrado cursor-pointer hidden md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/>
+      </svg>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="bg-red size-full p-2 flex flex-col md:flex-row lg:grid lg:grid-cols-3 pb-5">
       <!-- Texto principal -->
       <div class="flex flex-col justify-center w-full md:items-center md:ml-5">
         <h1 class="font-bold text-4xl text-center m-1 mb-5 font-titulo">Cuidado y amor para cada mascota</h1>
@@ -54,7 +62,7 @@
 
 <!-- SECTION -->
 
-<section class="md:m-10">c
+<section class="md:m-10">
   <h2 class="text-primary font-titulo font-black text-3xl text-center m-10 md:m-5">Lo que distingue PetCare</h2>
 
   <div class="flex flex-col items-center gap-5 md:grid md:grid-cols-3 md:gap-6 mt-10">
@@ -312,13 +320,13 @@
 
 <section class="mt-5">
   <h2 class="text-secondary text-center m-5 text-3xl font-extrabold font-titulo">Nuestros Médicos Expertos</h2>
-  <div class="border-2 m-4 md:grid grid-cols-3 md:gap-5 ">
-    <div class="bg-white border-primary border-6">
+  <div class="m-4 md:grid grid-cols-3 md:gap-5">
+    <div class="bg-white mb-5">
       <div>
-        <img src="src/img/andrea.png" class="bg-blue-400" alt="Veterinario examinando perro">
+        <img src="src/img/andrea.png" class="bg-primary" alt="Veterinario examinando perro">
       </div>
   
-      <div class="flex flex-col justify-center items-center">
+      <div class="flex flex-col justify-center items-center  m-5">
         <h3 class="text-primary mt-5 mb-5 text-2xl ">MV. Julián Lozano</h3>
         <p class="text-black text-lg pl-5">Titulado de la UANL. MVZ Oftalmólogo Veterinario</p>
         <div class="flex pb-5 mt-5">
@@ -333,12 +341,12 @@
       </div>
     </div>
 
-    <div class="bg-white">
+    <div class="bg-white mb-5">
       <div>
-        <img src="src/img/andrea.png" class="bg-blue-400" alt="Veterinario examinando perro">
+        <img src="src/img/andrea.png" class="bg-primary" alt="Veterinario examinando perro">
       </div>
   
-      <div class="flex flex-col justify-center items-center">
+      <div class="flex flex-col justify-center items-center m-5">
         <h3 class="text-primary mt-5 mb-5 text-2xl ">MV. Julián Lozano</h3>
         <p class="text-black text-lg pl-5">Titulado de la UANL. MVZ Oftalmólogo Veterinario</p>
         <div class="flex pb-5 mt-5">
@@ -353,12 +361,12 @@
       </div>
     </div>
 
-    <div class="bg-white">
+    <div class="bg-white mb-5">
       <div>
-        <img src="src/img/andrea.png" class="bg-blue-400" alt="Veterinario examinando perro">
+        <img src="src/img/andrea.png" class="bg-primary" alt="Veterinario examinando perro">
       </div>
   
-      <div class="flex flex-col justify-center items-center">
+      <div class="flex flex-col justify-center items-center m-5">
         <h3 class="text-primary mt-5 mb-5 text-2xl ">MV. Julián Lozano</h3>
         <p class="text-black text-lg pl-5">Titulado de la UANL. MVZ Oftalmólogo Veterinario</p>
         <div class="flex pb-5 mt-5">
@@ -377,7 +385,11 @@
   </div>
 </section>
 
+
+
+
 </body>
 </html>
 
 <script src="src/JavaScript/slider.js"></script>
+<script src="src/JavaScript/main.js"></script>

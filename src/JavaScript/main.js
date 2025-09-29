@@ -1,16 +1,37 @@
-const slider = document.getElementById('slider');
-const slides = slider.children;
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
+document.addEventListener("DOMContentLoaded", () => {
+  const menu = document.querySelector(".menu");
+  const menuCerrar = document.querySelector(".menuCerrado");
+  const enlaces = document.querySelector(".enlaces");
+  const header = document.querySelector(".header");
 
-let index = 0;
+  menu.addEventListener("click", menuVisible);
+  menuCerrar.addEventListener("click", menuInvisible);
 
-function showSlide(i) {
-  if (i < 0) index = slides.length - 1;
-  else if (i >= slides.length) index = 0;
-  else index = i;
-  slider.style.transform = `translateX(-${index * 100}%)`;
-}
+  function menuVisible() {
+    // Mostrar enlaces en columna fullscreen
+    enlaces.classList.remove("hidden");
+    enlaces.classList.add("flex", "flex-col", "justify-center", "items-center", "w-screen", "h-screen", "bg-primary", "text-2xl");
 
-prevBtn.addEventListener('click', () => showSlide(index - 1));
-nextBtn.addEventListener('click', () => showSlide(index + 1));
+    // Cambiar iconos
+    menuCerrar.classList.remove("hidden");
+    menuCerrar.classList.add("block");
+    menu.classList.add("hidden");
+
+    // Hacer crecer el header solo al click
+    header.classList.add("flex", "flex-col", "h-screen", "w-screen", "fixed", "top-0", "left-0", "bg-primary");
+  }
+
+  function menuInvisible() {
+    // Ocultar enlaces
+    enlaces.classList.remove("flex", "flex-col", "justify-center", "items-center", "w-screen", "bg-primary");
+    enlaces.classList.add("hidden");
+
+    // Cambiar iconos
+    menu.classList.remove("hidden");
+    menuCerrar.classList.remove("block");
+    menuCerrar.classList.add("hidden");
+
+    // Regresar header a su tamaño original
+    header.classList.remove("h-screen", "w-screen", "fixed", "top-0", "left-0", "bg-primary", "flex-col");
+  }
+});
