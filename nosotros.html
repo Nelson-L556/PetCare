@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="src/img/logo.png" type="image/x-icon">
+    <title>Nosotros</title>
+  </head>
+  <body class="text-blanco">
+    <header class="bg-primary relative">
+      <nav>
+        <div class="header top-0 left-0 flex items-center justify-between font-bold text-1 z-50">
+          <!-- Logo -->
+          <div>
+            <img src="src/img/logo.png" class="size-30" alt="Logo">
+          </div>
+
+          <!-- Enlaces -->
+          <div class="enlaces hidden md:flex items-center gap-5 md:flex-row flex-col justify-center w-full md:h-auto md:w-auto md:bg-transparent">
+            <a href="index.html" class="font-titulo">Inicio</a>
+            <a href="nosotros.html" class="font-titulo">Nosotros</a>
+            <a href="#" class="font-titulo">Información</a>
+            <a href="#" class="font-titulo">Servicios</a>
+          </div>
+
+          <!-- Iconos menú -->
+          <div>
+            <svg class="size-15 menu cursor-pointer md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z"/>
+            </svg>
+            <svg class="size-15 menuCerrado cursor-pointer hidden md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/>
+            </svg>
+          </div>
+        </div>
+      </nav>
+
+      <div class="bg-primary size-full p-2 flex flex-col md:flex-row lg:grid lg:grid-cols-3 pb-5">
+        <!-- Texto principal -->
+        <div class="flex flex-col justify-center w-full md:items-center md:ml-5">
+          <h1 class="font-bold text-4xl text-center m-1 mb-5 font-titulo">Cuidado y amor para cada mascota</h1>
+          <p class="mr-1.5 ml-2 text-2xl md:mb-5">
+            En PetCare, sabemos que cada mascota es especial. Ofrecemos atención profesional y cercana para garantizar su bienestar y darte tranquilidad a ti como dueño
+          </p>
+          <button class="bg-blanco text-black font-bold mb-5 py-3 rounded-full shadow-md
+            hover:bg-secondary hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out mt-5 lg:mr-25 w-full lg:w-1/2">Agenda tu cita</button>
+        </div>
+
+        <!-- Imagen con fondo skew -->
+        <div class="relative lg:col-span-2 lg:flex lg:items-center lg:justify-center mt-10
+                    before:content-[''] before:absolute before:inset-0
+                    before:block lg:before:size-90 before:rounded-full
+                    before:bg-secondary before:m-auto before:z-0 md:mt-0">
+          <img src="src/img/header.png" alt="Imagen header" class="relative rounded-full z-10 h-full">
+        </div>
+      </div>
+
+      <!-- SVG ondas -->
+<div class="absolute -bottom-20 md:left-0 md:-bottom-100 w-full overflow-hidden leading-none rotate-180">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="block">
+    <path fill="#277E88" fill-opacity="1"
+      d="M0,128L48,138.7C96,149,192,171,288,186.7C384,203,480,213,576,197.3C672,181,768,139,864,128C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
+  </svg>
+</div>
+
+
+    </header>
+  </body>
+</html>

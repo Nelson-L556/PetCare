@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build:styles": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
-    "start": "concurrently \"pnpm run build:styles\" \"browser-sync start --server --files 'src/index.html,src/output.css' --no-open\""
-  },
+"scripts": {
+  "build:styles": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+  "start": "concurrently \"pnpm run build:styles\" \"browser-sync start --server . --files '*.html, src/output.css' --no-open\""
+
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",
