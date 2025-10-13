@@ -38,33 +38,85 @@
 
       <div class="bg-primary size-full p-2 flex flex-col md:flex-row lg:grid lg:grid-cols-3 pb-5">
         <!-- Texto principal -->
-        <div class="flex flex-col justify-center w-full md:items-center md:ml-5">
-          <h1 class="font-bold text-4xl text-center m-1 mb-5 font-titulo">Cuidado y amor para cada mascota</h1>
-          <p class="mr-1.5 ml-2 text-2xl md:mb-5">
-            En PetCare, sabemos que cada mascota es especial. Ofrecemos atención profesional y cercana para garantizar su bienestar y darte tranquilidad a ti como dueño
-          </p>
-          <button class="bg-blanco text-black font-bold mb-5 py-3 rounded-full shadow-md
-            hover:bg-secondary hover:text-white hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out mt-5 lg:mr-25 w-full lg:w-1/2">Agenda tu cita</button>
-        </div>
-
-        <!-- Imagen con fondo skew -->
-        <div class="relative lg:col-span-2 lg:flex lg:items-center lg:justify-center mt-10
-                    before:content-[''] before:absolute before:inset-0
-                    before:block lg:before:size-90 before:rounded-full
-                    before:bg-secondary before:m-auto before:z-0 md:mt-0">
-          <img src="src/img/header.png" alt="Imagen header" class="relative rounded-full z-10 h-full">
+        <div>
+          <img src="" alt="">
         </div>
       </div>
+    </header>
+  
+<div class="relative -z-10 lg:w-full">
+  <div class="relative w-full h-[300px] lg:h-[500px] overflow-hidden">
+    <!-- Imagen de fondo -->
+    <img 
+      src="src/img/header.jpg" 
+      class="absolute inset-0 w-full h-full object-cover object-center" 
+      alt="Perro siendo atendido"
+    >
 
-      <!-- SVG ondas -->
-<div class="absolute -bottom-20 md:left-0 md:-bottom-100 w-full overflow-hidden leading-none rotate-180">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="block">
-    <path fill="#277E88" fill-opacity="1"
-      d="M0,128L48,138.7C96,149,192,171,288,186.7C384,203,480,213,576,197.3C672,181,768,139,864,128C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
-  </svg>
+    <!-- Superposición oscura -->
+    <div class="absolute inset-0 bg-black/50"></div>
+  </div>
+
+  <div class=" md:absolute z-100 top-20 right-10 bg-primary md:bg-transparent p-2 md:w-100 xl:w-150">
+    <h2 class="text-white font-bold font-titulo text-center text-2xl mb-5">Quiénes somos</h2>
+    <p class="text-white text-xl">En PetCare, creemos que cada mascota merece una atención llena de cariño, respeto y dedicación. Nuestro equipo de profesionales trabaja con pasión para ofrecer servicios veterinarios de calidad, cuidando la salud y el bienestar de tus compañeros de vida.
+    Más que una clínica, somos una familia comprometida con brindar confianza y acompañamiento en cada etapa de su vida.</p>
+  </div>
+
+  <!-- SVG ondas -->
+  <div class="z-20 rotate-180">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="block h-110">
+      <path fill="#277E88" fill-opacity="1"
+        d="M0,128L48,138.7C96,149,192,171,288,186.7C384,203,480,213,576,197.3C672,181,768,139,864,128C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
+    </svg>
+  </div>
 </div>
 
+<!--* Sección Valores -->
+<section class="bg-green-500 -mt-40">
+  <div class="flex flex-col justify-center">
+    <h2 class="text-black text-center">Nuestra Identidad</h2>
 
-    </header>
+    <div class="md:grid grid-cols-2">
+      <div class="">
+        <img src="src/img/mision.webp" alt="Veterinario explicando la consulta a un dueño" class="h-full w-full">
+      </div>
+
+      <div class="bg-blue-500">
+        <h2>Misión</h2>
+        <p>En PetCare, nuestra misión es brindar atención veterinaria integral, ética y personalizada que promueva el bienestar físico y emocional de cada mascota. Nos comprometemos a acompañar a las familias en cada etapa de la vida de sus animales, con profesionalismo, empatía y vocación de servicio.</p>
+      </div>
+    </div>
+
+    <div class="md:grid grid-cols-2">
+      <div>
+        <h2>Visión</h2>
+        <p>En PetCare, nuestra misión es brindar atención veterinaria integral, ética y personalizada que promueva el bienestar físico y emocional de cada mascota. Nos comprometemos a acompañar a las familias en cada etapa de la vida de sus animales, con profesionalismo, empatía y vocación de servicio.</p>
+      </div>
+
+      <div>
+        <img src="src/img/vision.jpg" alt="Veterinario explicando la consulta a un dueño" class="h-full w-full">
+      </div>
+
+    </div>
+
+    <div class="md:grid grid-cols-2">
+      <div>
+        <img src="src/img/vision.jpg" alt="Veterinario explicando la consulta a un dueño" class="h-full w-full">
+      </div>
+
+      <div>
+        <h2>Nuestros Valores</h2>
+        <p>En PetCare trabajamos guiados por la empatía, la responsabilidad y el respeto hacia todos los seres vivos.
+        Creemos que cada mascota merece una atención amorosa y profesional, por eso actuamos con honestidad, compromiso y sensibilidad en cada consulta, diagnóstico o tratamiento.
+        Nuestro mayor valor es el bienestar animal y la confianza de quienes depositan en nosotros el cuidado de sus compañeros de vida.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</section>
   </body>
+  <script src="src/JavaScript/main.js"></script>
 </html>
