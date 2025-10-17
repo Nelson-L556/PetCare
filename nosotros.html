@@ -57,14 +57,14 @@
     <div class="absolute inset-0 bg-black/50"></div>
   </div>
 
-  <div class=" md:absolute z-100 top-20 right-10 bg-primary md:bg-transparent p-2 md:w-100 xl:w-150">
+  <div class="md:absolute z-100 top-20 right-10 bg-primary md:bg-transparent p-2 md:w-100 xl:w-150">
     <h2 class="text-white font-bold font-titulo text-center text-2xl mb-5">Quiénes somos</h2>
     <p class="text-white text-xl">En PetCare, creemos que cada mascota merece una atención llena de cariño, respeto y dedicación. Nuestro equipo de profesionales trabaja con pasión para ofrecer servicios veterinarios de calidad, cuidando la salud y el bienestar de tus compañeros de vida.
     Más que una clínica, somos una familia comprometida con brindar confianza y acompañamiento en cada etapa de su vida.</p>
   </div>
 
   <!-- SVG ondas -->
-  <div class="z-20 rotate-180">
+  <div class="z-20 rotate-180 ">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="block h-110">
       <path fill="#277E88" fill-opacity="1"
         d="M0,128L48,138.7C96,149,192,171,288,186.7C384,203,480,213,576,197.3C672,181,768,139,864,128C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" />
@@ -115,162 +115,299 @@
   </div>
 </section>
 
-<main>
-  <h2 class="text-primary font-titulo font-bold text-3xl text-center mb-8">Nuestra Historia</h2>
+  <main>
+    <h2 class="text-primary font-titulo font-bold text-3xl text-center mb-8">Nuestra Historia</h2>
 
-<!-- Sección 1 -->
-<div class="flex bg-primary-light flex-col md:grid md:grid-cols-3 items-center gap-6 px-6 py-4">
-  <div class="h-[300px] w-[200px]">
-    <img src="src/img/idea.png" class="h-full" alt="Imagen de idea">
-  </div>
-
-  <div class="hidden relative w-[120px] h-[120px] md:flex items-center justify-center">
-    <div class="absolute top-[120px] left-1/2 w-1 lg:h-[220px] md:h-[260px] bg-primary -translate-x-1/2 z-0"></div>
-    
-    <svg class="absolute top-0 left-0 w-full h-full rotate-[-90deg]">
-      <circle cx="60" cy="60" r="50" stroke="#548CFF" stroke-width="20" fill="none" />
-      <circle cx="60" cy="60" r="50" stroke="#FF7F3E" stroke-width="20" fill="none" stroke-dasharray="314" stroke-dashoffset="262" />
-    </svg>
-
-    <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-      <img src="src/img/inicio.png" class="bg-white w-[70px] h-[70px] rounded-full" alt="Imagen de un cohete">
-    </div>
-  </div>
-
-  <div class="max-w-[400px]">
-    <h3 class="text-black text-xl font-bold mb-2">2019 — El origen de una idea</h3>
-    <p class="text-black">Todo comenzó en una tarde de otoño, cuando un grupo de amigos —todos amantes de los animales— se preguntó: ¿Por qué es tan difícil encontrar servicios confiables para nuestras mascotas? Esa inquietud se convirtió en una conversación, y esa conversación en una visión: crear una plataforma que pusiera el bienestar animal al centro.</p>
-  </div>
-</div>
-
-
-  <!-- Sección 2 -->
-  <div class="flex flex-col-reverse md:grid md:grid-cols-3 items-center gap-6 px-6 py-4">
-    <div class="max-w-[400px]">
-      <h3 class="text-black text-xl font-bold mb-2">2020 — Primeros pasos</h3>
-      <p class="text-black">Durante los meses más inciertos de la pandemia, decidimos actuar. Reunimos nuestras habilidades en desarrollo web, diseño y atención veterinaria para construir un prototipo funcional. Nació así la primera versión de PetCare: sencilla, pero con propósito.</p>
+  <!-- Sección 1 -->
+  <div class="flex bg-primary-light flex-col md:grid md:grid-cols-3 items-center gap-6 px-6 py-4">
+    <div class="h-[300px] w-[200px]">
+      <img src="src/img/idea.png" class="h-full" alt="Imagen de idea">
     </div>
 
-    <div class="hidden md:flex relative w-[120px] h-[120px] items-center justify-center">
-      <div class="absolute top-[120px] left-1/2 w-1 lg:h-[220px] md:h-[250px] bg-primary -translate-x-1/2 z-0"></div>
+    <div class="hidden relative w-[120px] h-[120px] md:flex items-center justify-center">
+      <div class="absolute top-[120px] left-1/2 w-1 lg:h-[220px] md:h-[260px] bg-primary -translate-x-1/2 z-0"></div>
+      
       <svg class="absolute top-0 left-0 w-full h-full rotate-[-90deg]">
         <circle cx="60" cy="60" r="50" stroke="#548CFF" stroke-width="20" fill="none" />
-        <circle cx="60" cy="60" r="50" stroke="#FF7F3E" stroke-width="20" fill="none" stroke-dasharray="314" stroke-dashoffset="209" />
+        <circle cx="60" cy="60" r="50" stroke="#FF7F3E" stroke-width="20" fill="none" stroke-dasharray="314" stroke-dashoffset="262" />
       </svg>
+
       <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-        <img src="src/img/pasos-icono.png" class="bg-white size-[70px] rounded-full" alt="Imagen de un cohete">
+        <img src="src/img/inicio.png" class="bg-white w-[70px] h-[70px] rounded-full" alt="Imagen de un cohete">
       </div>
     </div>
-    <div class="h-[300px] w-[200px]">
-      <img src="src/img/pasos.png" class="h-full" alt="Imagen de prototipo">
-    </div>
 
+    <div class="max-w-[400px]">
+      <h3 class="text-black text-xl font-bold mb-2">2019 — El origen de una idea</h3>
+      <p class="text-black">Todo comenzó en una tarde de otoño, cuando un grupo de amigos —todos amantes de los animales— se preguntó: ¿Por qué es tan difícil encontrar servicios confiables para nuestras mascotas? Esa inquietud se convirtió en una conversación, y esa conversación en una visión: crear una plataforma que pusiera el bienestar animal al centro.</p>
+    </div>
   </div>
 
-  <!-- Sección 3 -->
-  <div class=" bg-primary-light flex flex-col md:grid md:grid-cols-3 items-center gap-6 px-6 py-4">
-    <div class="h-[300px] w-[200px]">
-      <img src="src/img/proyecto.png" class="h-full" alt="Imagen de plataforma">
+
+    <!-- Sección 2 -->
+    <div class="flex flex-col-reverse md:grid md:grid-cols-3 items-center gap-6 px-6 py-4">
+      <div class="max-w-[400px]">
+        <h3 class="text-black text-xl font-bold mb-2">2020 — Primeros pasos</h3>
+        <p class="text-black">Durante los meses más inciertos de la pandemia, decidimos actuar. Reunimos nuestras habilidades en desarrollo web, diseño y atención veterinaria para construir un prototipo funcional. Nació así la primera versión de PetCare: sencilla, pero con propósito.</p>
+      </div>
+
+      <div class="hidden md:flex relative w-[120px] h-[120px] items-center justify-center">
+        <div class="absolute top-[120px] left-1/2 w-1 lg:h-[220px] md:h-[250px] bg-primary -translate-x-1/2 z-0"></div>
+        <svg class="absolute top-0 left-0 w-full h-full rotate-[-90deg]">
+          <circle cx="60" cy="60" r="50" stroke="#548CFF" stroke-width="20" fill="none" />
+          <circle cx="60" cy="60" r="50" stroke="#FF7F3E" stroke-width="20" fill="none" stroke-dasharray="314" stroke-dashoffset="209" />
+        </svg>
+        <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+          <img src="src/img/pasos-icono.png" class="bg-white size-[70px] rounded-full" alt="Imagen de un cohete">
+        </div>
+      </div>
+      <div class="h-[300px] w-[200px]">
+        <img src="src/img/pasos.png" class="h-full" alt="Imagen de prototipo">
+      </div>
+
     </div>
+
+    <!-- Sección 3 -->
+    <div class=" bg-primary-light flex flex-col md:grid md:grid-cols-3 items-center gap-6 px-6 py-4">
+      <div class="h-[300px] w-[200px]">
+        <img src="src/img/proyecto.png" class="h-full" alt="Imagen de plataforma">
+      </div>
+      <div class="hidden md:flex relative w-[120px] h-[120px] items-center justify-center">
+        <div class="absolute top-[120px] left-1/2 w-1 lg:h-[220px] md:h-[220px] bg-primary -translate-x-1/2 z-0"></div>
+        <svg class="absolute top-0 left-0 w-full h-full rotate-[-90deg]">
+          <circle cx="60" cy="60" r="50" stroke="#548CFF" stroke-width="20" fill="none" />
+          <circle cx="60" cy="60" r="50" stroke="#FF7F3E" stroke-width="20" fill="none" stroke-dasharray="314" stroke-dashoffset="157" />
+        </svg>
+        <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+          <img src="src/img/proyecto-icono.png" class="bg-white size-[70px] rounded-full" alt="Icono de plataforma">
+        </div>
+      </div>
+      <div class="max-w-[400px]">
+        <h3 class="text-black text-xl font-bold mb-2">2021 — De proyecto a plataforma</h3>
+        <p class="text-black">Con el apoyo de nuestros primeros usuarios y muchas horas de prueba y error, rediseñamos la experiencia completa. Incorporamos perfiles de mascotas, agendamiento de citas y contenido educativo. PetCare dejó de ser un experimento para convertirse en una herramienta real para cientos de familias.</p>
+      </div>
+    </div>
+
+    <!-- Sección 4 -->
+    <div class="flex flex-col md:grid md:grid-cols-3 items-center gap-6 px-6 py-4">
+      <div class="max-w-[400px]">
+        <h3 class="text-black text-xl font-bold mb-2">2022 — Crecimiento con propósito</h3>
+        <p class="text-black">Nos aliamos con clínicas veterinarias, paseadores y refugios locales. Lanzamos nuestra app móvil y ampliamos nuestros servicios a nuevas ciudades. Cada paso fue guiado por una sola meta: facilitar el cuidado responsable y accesible de las mascotas.</p>
+      </div>
+
+      <div class="hidden md:flex relative w-[120px] h-[120px] items-center justify-center">
+        <div class="absolute top-[120px] left-1/2 w-1 lg:h-[220px] md:h-[220px] bg-primary -translate-x-1/2 z-0"></div>
+        <svg class="absolute top-0 left-0 w-full h-full rotate-[-90deg]">
+          <circle cx="60" cy="60" r="50" stroke="#548CFF" stroke-width="20" fill="none" />
+          <circle cx="60" cy="60" r="50" stroke="#FF7F3E" stroke-width="20" fill="none" stroke-dasharray="314" stroke-dashoffset="104" />
+        </svg>
+        <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+          <img src="src/img/crecimiento-icono.png" class="bg-white size-[70px] rounded-full" alt="Icono de expansión">
+        </div>
+      </div>
+
+      <div class="h-[300px] w-[200px]">
+        <img src="src/img/crecimiento.png" class="h-full" alt="Imagen de expansión">
+      </div>
+    </div>
+
+  <!-- Sección 5 -->
+  <div class="bg-primary-light flex flex-col md:grid md:grid-cols-3 items-center gap-6 px-6 py-4">
+    <!-- Imagen -->
+    <div class="h-[300px] w-[200px]">
+      <img src="src/img/comunidad.png" class="h-full" alt="Imagen de comunidad">
+    </div>
+
+    <!-- Círculo + línea -->
     <div class="hidden md:flex relative w-[120px] h-[120px] items-center justify-center">
+      <!-- Línea vertical extendida hacia abajo -->
       <div class="absolute top-[120px] left-1/2 w-1 lg:h-[220px] md:h-[220px] bg-primary -translate-x-1/2 z-0"></div>
+
+      <!-- Círculo de progreso -->
       <svg class="absolute top-0 left-0 w-full h-full rotate-[-90deg]">
         <circle cx="60" cy="60" r="50" stroke="#548CFF" stroke-width="20" fill="none" />
-        <circle cx="60" cy="60" r="50" stroke="#FF7F3E" stroke-width="20" fill="none" stroke-dasharray="314" stroke-dashoffset="157" />
+        <circle cx="60" cy="60" r="50" stroke="#FF7F3E" stroke-width="20" fill="none" stroke-dasharray="314" stroke-dashoffset="52" />
       </svg>
+
+      <!-- Icono centrado -->
       <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-        <img src="src/img/proyecto-icono.png" class="bg-white size-[70px] rounded-full" alt="Icono de plataforma">
+        <img src="src/img/comunidad-icono.png" class="bg-white size-[70px] rounded-full" alt="Icono de comunidad">
       </div>
     </div>
-    <div class="max-w-[400px]">
-      <h3 class="text-black text-xl font-bold mb-2">2021 — De proyecto a plataforma</h3>
-      <p class="text-black">Con el apoyo de nuestros primeros usuarios y muchas horas de prueba y error, rediseñamos la experiencia completa. Incorporamos perfiles de mascotas, agendamiento de citas y contenido educativo. PetCare dejó de ser un experimento para convertirse en una herramienta real para cientos de familias.</p>
-    </div>
-  </div>
-
-  <!-- Sección 4 -->
-  <div class="flex flex-col md:grid md:grid-cols-3 items-center gap-6 px-6 py-4">
-    <div class="max-w-[400px]">
-      <h3 class="text-black text-xl font-bold mb-2">2022 — Crecimiento con propósito</h3>
-      <p class="text-black">Nos aliamos con clínicas veterinarias, paseadores y refugios locales. Lanzamos nuestra app móvil y ampliamos nuestros servicios a nuevas ciudades. Cada paso fue guiado por una sola meta: facilitar el cuidado responsable y accesible de las mascotas.</p>
-    </div>
-
-    <div class="hidden md:flex relative w-[120px] h-[120px] items-center justify-center">
-      <div class="absolute top-[120px] left-1/2 w-1 lg:h-[220px] md:h-[220px] bg-primary -translate-x-1/2 z-0"></div>
-      <svg class="absolute top-0 left-0 w-full h-full rotate-[-90deg]">
-        <circle cx="60" cy="60" r="50" stroke="#548CFF" stroke-width="20" fill="none" />
-        <circle cx="60" cy="60" r="50" stroke="#FF7F3E" stroke-width="20" fill="none" stroke-dasharray="314" stroke-dashoffset="104" />
-      </svg>
-      <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-        <img src="src/img/crecimiento-icono.png" class="bg-white size-[70px] rounded-full" alt="Icono de expansión">
-      </div>
-    </div>
-
-    <div class="h-[300px] w-[200px]">
-      <img src="src/img/crecimiento.png" class="h-full" alt="Imagen de expansión">
-    </div>
-  </div>
-
- <!-- Sección 5 -->
-<div class="bg-primary-light flex flex-col md:grid md:grid-cols-3 items-center gap-6 px-6 py-4">
-  <!-- Imagen -->
-  <div class="h-[300px] w-[200px]">
-    <img src="src/img/comunidad.png" class="h-full" alt="Imagen de comunidad">
-  </div>
-
-  <!-- Círculo + línea -->
-  <div class="hidden md:flex relative w-[120px] h-[120px] items-center justify-center">
-    <!-- Línea vertical extendida hacia abajo -->
-    <div class="absolute top-[120px] left-1/2 w-1 lg:h-[220px] md:h-[220px] bg-primary -translate-x-1/2 z-0"></div>
-
-    <!-- Círculo de progreso -->
-    <svg class="absolute top-0 left-0 w-full h-full rotate-[-90deg]">
-      <circle cx="60" cy="60" r="50" stroke="#548CFF" stroke-width="20" fill="none" />
-      <circle cx="60" cy="60" r="50" stroke="#FF7F3E" stroke-width="20" fill="none" stroke-dasharray="314" stroke-dashoffset="52" />
-    </svg>
-
-    <!-- Icono centrado -->
-    <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-      <img src="src/img/comunidad-icono.png" class="bg-white size-[70px] rounded-full" alt="Icono de comunidad">
-    </div>
-  </div>
-
-  <!-- Texto -->
-  <div class="max-w-[400px]">
-    <h3 class="text-black text-xl font-bold mb-2">2023 — Comunidad y confianza</h3>
-    <p class="text-black">Más que una plataforma, PetCare se convirtió en una comunidad. Implementamos reseñas verificadas, soporte en tiempo real y campañas de adopción. Escuchar a nuestros usuarios nos ayudó a crecer con empatía y transparencia.</p>
-  </div>
-</div>
-
-<!-- Sección 6 -->
-<div class="flex flex-col md:grid md:grid-cols-3 items-center gap-6 px-6 py-4">
 
     <!-- Texto -->
-  <div class="max-w-[400px]">
-    <h3 class="text-black text-xl font-bold mb-2">2025 — Lo que viene</h3>
-    <p class="text-black">Hoy seguimos evolucionando. Con nuevas funciones en desarrollo, alianzas estratégicas y una visión clara, estamos construyendo el futuro del cuidado animal. Porque cada historia con una mascota merece ser vivida con tranquilidad, cariño y confianza.</p>
-  </div>
-
-    <!-- Círculo sin línea adicional -->
-  <div class="hidden md:flex relative w-[120px] h-[120px] items-center justify-center">
-    <!-- Círculo de progreso -->
-    <svg class="absolute top-0 left-0 w-full h-full rotate-[-90deg]">
-      <circle cx="60" cy="60" r="50" stroke="#548CFF" stroke-width="20" fill="none" />
-      <circle cx="60" cy="60" r="50" stroke="#FF7F3E" stroke-width="20" fill="none" stroke-dasharray="314" stroke-dashoffset="0" />
-    </svg>
-
-    <!-- Icono centrado -->
-    <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-      <img src="src/img/futuro-icono.png" class="bg-white size-[70px] rounded-full" alt="Icono del futuro">
+    <div class="max-w-[400px]">
+      <h3 class="text-black text-xl font-bold mb-2">2023 — Comunidad y confianza</h3>
+      <p class="text-black">Más que una plataforma, PetCare se convirtió en una comunidad. Implementamos reseñas verificadas, soporte en tiempo real y campañas de adopción. Escuchar a nuestros usuarios nos ayudó a crecer con empatía y transparencia.</p>
     </div>
   </div>
 
-  <!-- Imagen -->
-  <div class="h-[300px] w-[200px]">
-    <img src="src/img/futuro.png" class="h-full" alt="Imagen del futuro">
+  <!-- Sección 6 -->
+  <div class="flex flex-col md:grid md:grid-cols-3 items-center gap-6 px-6 py-4">
+
+      <!-- Texto -->
+    <div class="max-w-[400px]">
+      <h3 class="text-black text-xl font-bold mb-2">2025 — Lo que viene</h3>
+      <p class="text-black">Hoy seguimos evolucionando. Con nuevas funciones en desarrollo, alianzas estratégicas y una visión clara, estamos construyendo el futuro del cuidado animal. Porque cada historia con una mascota merece ser vivida con tranquilidad, cariño y confianza.</p>
+    </div>
+
+      <!-- Círculo sin línea adicional -->
+    <div class="hidden md:flex relative w-[120px] h-[120px] items-center justify-center">
+      <!-- Círculo de progreso -->
+      <svg class="absolute top-0 left-0 w-full h-full rotate-[-90deg]">
+        <circle cx="60" cy="60" r="50" stroke="#548CFF" stroke-width="20" fill="none" />
+        <circle cx="60" cy="60" r="50" stroke="#FF7F3E" stroke-width="20" fill="none" stroke-dasharray="314" stroke-dashoffset="0" />
+      </svg>
+
+      <!-- Icono centrado -->
+      <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+        <img src="src/img/futuro-icono.png" class="bg-white size-[70px] rounded-full" alt="Icono del futuro">
+      </div>
+    </div>
+
+    <!-- Imagen -->
+    <div class="h-[300px] w-[200px]">
+      <img src="src/img/futuro.png" class="h-full" alt="Imagen del futuro">
+    </div>
   </div>
-</div>
-</main>
+  </main>
+
+  <section class="bg-primary">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 p-6 text-center">
+      <div>
+        <h3 class="font-titulo font-bold text-3xl">+2,000</h3>
+        <p class="text-lg">Mascotas felices</p>
+      </div>
+
+      <div>
+        <h3 class="font-titulo font-bold text-3xl">+500</h3>
+        <p class="text-lg">Cirugías</p>
+      </div>
+
+      <div>
+        <h3 class="font-titulo font-bold text-3xl">+12</h3>
+        <p class="text-lg">Años de experiencia</p>
+      </div>
+
+      <div>
+        <h3 class="font-titulo font-bold text-3xl">+800</h3>
+        <p class="text-lg">Servicios de estética</p>
+      </div>
+    </div>
+  </section>
+
+  <div>
+    <h2 class="text-primary font-titulo font-bold text-2xl text-center pt-5">Marcas con las que trabajamos</h2>
+    <div class="grid grid-cols-2 md:grid-cols-auto md:grid-cols-5 gap-4 place-items-center m-5">
+
+      <div>
+        <img src="src/img/marca 1.png" alt="Logo de churu">
+      </div>
+
+      <div>
+        <img src="src/img/marca 2.png" alt="Logo de Petco">
+      </div>
+
+      <div>
+        <img src="src/img/marca 3.png" alt="Logo de Purina">
+      </div>
+
+      <div>
+        <img src="src/img/marca 9.webp" alt="Logo de Clean & Dry">
+      </div>
+
+      <div>
+        <img src="src/img/marca 10.png" alt="Logo de Sand & Cat">
+      </div>
+
+            <div>
+        <img src="src/img/marca 6.png" alt="Logo de Iron Dog">
+      </div>
+
+      <div>
+        <img src="src/img/marca 7.png" alt="Logo de Purina Cat Chow">
+      </div>
+
+      <div>
+        <img src="src/img/marca 8.jpg" alt="Logo de Moly Store">
+      </div>
+
+      <div>
+        <img src="src/img/marca 4.png" alt="Logo de Nupec">
+      </div>
+
+      <div>
+        <img src="src/img/marca 5.png" alt="Logo de Roal Canin">
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-secondary">
+<div class="flex flex-col p-5 lg:grid lg:grid-cols-4 lg:gap-8 lg:items-start">
+      <div class="w-48  flex flex-col justify-center items-center mx-auto">
+        <img src="src/img/logo.png" class="w-full h-full object-contain" alt="Logo de PetCare">
+
+        <div class="flex gap-4 mb-5 md:mb-0">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-5 cursor-pointer hover:scale-150 transition-all" viewBox="0 0 20 20"><path fill="currentColor" d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.101.9 2 2 2h14c1.1 0 2-.899 2-2V3c0-1.1-.9-2-2-2M9.984 15.523a5.54 5.54 0 0 0 5.538-5.539c0-.338-.043-.664-.103-.984H17v7.216a.69.69 0 0 1-.693.69H3.693a.69.69 0 0 1-.693-.69V9h1.549c-.061.32-.104.646-.104.984a5.54 5.54 0 0 0 5.539 5.539M6.523 9.984a3.461 3.461 0 1 1 6.922 0a3.461 3.461 0 0 1-6.922 0M16.307 6h-1.615A.694.694 0 0 1 14 5.308V3.691c0-.382.31-.691.691-.691h1.615c.384 0 .694.309.694.691v1.616c0 .381-.31.693-.693.693"/></svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-5 cursor-pointer hover:scale-150 transition-all" viewBox="0 0 20 20"><path fill="currentColor" d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4m2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443z"/></svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-5 cursor-pointer hover:scale-150 transition-all" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+          </svg>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-titulo font-bold mb-3">Contacto</h3>
+        <div class="flex">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-6 mr-2"" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"/></svg>
+            <p>contacto@petcare.com.mx</p>
+        </div>
+
+        <div class="flex mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-6 mr-2" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12q-.4 0-.712-.288T18.925 11q-.325-2.325-1.963-3.963T13 5.076q-.425-.05-.712-.35T12 4t.3-.712t.7-.238q3.15.35 5.375 2.575T20.95 11q.05.4-.238.7T20 12m-4.175 0q-.325 0-.575-.225t-.375-.6q-.2-.725-.763-1.287t-1.287-.763q-.375-.125-.6-.375T12 8.15q0-.5.35-.812t.775-.213q1.4.325 2.413 1.338t1.337 2.412q.1.425-.225.775t-.825.35m4.125 9q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"/></svg>
+            <p>+52 55 1234 678</p>
+        </div>
+
+        <div class="flex mt-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 mr-2" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c-4.2 0-8 3.22-8 8.2c0 3.18 2.45 6.92 7.34 11.23c.38.33.95.33 1.33 0C17.55 17.12 20 13.38 20 10.2C20 5.22 16.2 2 12 2m0 10c-1.1 0-2-.9-2-2s.9-2 2-2s2 .9 2 2s-.9 2-2 2"/></svg>
+            
+            <p>Nuevo León, México, C.P 01234</p>
+        </div>
+      </div>
+      
+      <div class="mt-5 md:mt-0">
+        <h3 class="text-lg font-titulo font-bold mb-3">Enlaces</h3>
+        <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nuestro Equipo</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Agendar Cita</a></li>
+            <li><a href="#">Testimonios</a></li>
+            <li><a href="#">Politica de Privacidad</a></li>
+            <li><a href="#">Albergue</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="flex flex-col justify-items-center place-items-center mt-5 md:mt-0">
+        <h3 class="text-lg font-titulo font-bold mb-3">¡Suscríbete al boletín de PetCare!</h3>
+
+        <div class="flex">
+          <form action="">
+            <p>Mantente al día y recibe contenido exclusivo sobre el cuidado de tus mascotas, consejos, novedades y promociones especiales directamente en tu correo</p>
+            <div>
+              <input class="text-white text-lg" type="text" placeholder="Nombre" name="nombre" id="nombre">
+               <input class="text-white text-lg" type="email" name="email" id="email" placeholder="Correo electronico">
+            </div>
+            <button>Suscribete</button>
+          </form>
+        </div>
+      </div>
+  </div>
+</footer>
   </body>
   <script src="src/JavaScript/main.js"></script>
 </html>
