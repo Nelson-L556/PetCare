@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="src/img/logo.png" type="image/x-icon">
+    <title>Nosotros</title>
+  </head>
+  <body class="text-blanco">
+    <header class="bg-primary relative">
+      <nav>
+        <div class="header top-0 left-0 flex items-center justify-between font-bold text-1 z-50">
+          <!-- Logo -->
+          <div>
+            <img src="src/img/logo.png" class="size-30" alt="Logo">
+          </div>
+
+          <!-- Enlaces -->
+          <div class="enlaces hidden md:flex items-center gap-5 md:flex-row flex-col justify-center w-full md:h-auto md:w-auto md:bg-transparent">
+            <a href="index.html" class="font-titulo">Inicio</a>
+            <a href="nosotros.html" class="font-titulo">Nosotros</a>
+            <a href="servicios.html" class="font-titulo">Servicios</a>
+            <a href="#" class="font-titulo">Información</a>
+          </div>
+
+          <!-- Iconos menú -->
+          <div>
+            <svg class="size-15 menu cursor-pointer md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z"/>
+            </svg>
+            <svg class="size-15 menuCerrado cursor-pointer hidden md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/>
+            </svg>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="h-[400px] w-auto">
+        <div class="h-full  relative">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <img src="src/img/servicios.jpg" class="h-full w-full" alt="Gato recostado encima de perro">
+            <div class="absolute top-42 md:top-32 left-15">
+                <h2 class="text-white text-3xl md:text-5xl font-bold font-titulo">Cuidado Profesional</h2>
+                <p class="text-white text-md md:text-lg font-bold font-titulo ">Tu mascota, en manos expertas.</p>
+            </div>
+        </div>
+    </section>
+
+<section class="mt-10 flex flex-col items-center drop-shadow-xl/50">
+  <h2 class="font-extrabold text-3xl text-center p-5 font-titulo text-secondary">
+    Nuestros Servicios Médicos
+  </h2>
+
+  <div class="relative w-full md:w-3/4 overflow-hidden">
+    <!-- Carrusel -->
+    <div id="carousel" class="flex transition-transform duration-500">
+      
+      <!-- Card 1 -->
+      <div class="min-w-full md:min-w-[33.3333%] px-2">
+        <div class="relative p-5 bg-white -hidden">
+          <div class="absolute top-0 right-0 w-1 h-full bg-primary"></div>
+          <div class="flex flex-col items-center relative z-10">
+            <img src="src/img/consulta.jpg" class="bg-secondary md:size-40 rounded-full mb-4" alt="Consulta médica">
+            <h3 class="font-extrabold text-2xl mb-3 text-primary">Consulta General</h3>
+            <p class="md:text-lg text-black text-center">Evaluación médica completa para tu mascota, con diagnóstico y recomendaciones personalizadas.</p>
+          </div>
+        </div>
+      </div>
+
+            <!-- Card 1 -->
+      <div class="min-w-full md:min-w-[33.3333%] px-2">
+        <div class="relative p-5 bg-white overflow-hidden">
+          <div class="absolute top-0 right-0 w-1 h-full bg-primary"></div>
+          <div class="flex flex-col items-center relative z-10">
+            <img src="src/img/consulta.jpg" class="bg-secondary md:size-40 rounded-full mb-4" alt="Consulta médica">
+            <h3 class="font-extrabold text-2xl mb-3 text-primary">Consulta General</h3>
+            <p class="md:text-lg text-black text-center">Evaluación médica completa para tu mascota, con diagnóstico y recomendaciones personalizadas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="min-w-full md:min-w-[33.3333%] px-2">
+        <div class="relative p-5 bg-white overflow-hidden">
+          <div class="absolute top-0 right-0 w-1 h-full bg-primary"></div>
+          <div class="flex flex-col items-center relative z-10">
+            <img src="src/img/vacunacion.jpg" class="bg-secondary md:size-40 rounded-full mb-4" alt="Vacunación">
+            <h3 class="font-extrabold text-2xl mb-3 text-primary">Vacunación</h3>
+            <p class="md:text-lg text-black text-center">Protege a tu mascota con nuestro esquema completo de vacunas y seguimiento veterinario.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="min-w-full md:min-w-[33.3333%] px-2">
+        <div class="relative p-5 bg-white overflow-hidden">
+          <div class="absolute top-0 right-0 w-1 h-full bg-primary"></div>
+          <div class="flex flex-col items-center relative z-10">
+            <img src="src/img/estetica.jpg" class="bg-secondary md:size-40 rounded-full mb-4" alt="Estética">
+            <h3 class="font-extrabold text-2xl mb-3 text-primary">Estética</h3>
+            <p class="md:text-lg text-black text-center">Baños, cortes y cuidado estético para que tu mascota luzca y se sienta genial.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 (oculta en md, visible solo al desplazarse) -->
+      <div class="min-w-full md:min-w-[33.3333%] px-2">
+        <div class="relative p-5 bg-white overflow-hidden">
+          <div class="absolute top-0 right-0 w-1 h-full bg-primary"></div>
+          <div class="flex flex-col items-center relative z-10">
+            <img src="src/img/emergencias.jpg" class="bg-secondary md:size-40 rounded-full mb-4" alt="Emergencias">
+            <h3 class="font-extrabold text-2xl mb-3 text-primary">Emergencias</h3>
+            <p class="md:text-lg text-black text-center">Atención inmediata para situaciones críticas, con personal capacitado y equipamiento especializado.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Botones de navegación -->
+    <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 bg-primary text-white px-3 py-1 rounded hover:bg-secondary transition-all hover:scale-105">◀</button>
+    <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 bg-primary text-white px-3 py-1 rounded hover:bg-secondary transition-all hover:scale-105">▶</button>
+  </div>
+</section>
+
+
+
+
+  </body>
+  <script src="src/JavaScript/main.js"></script>
+  <script src="src/JavaScript/servicios.js"></script>
+</html>
