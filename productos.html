@@ -37,26 +37,36 @@
     </nav>
 </header>
 
-<main class=" md:grid md:grid-cols-4">
-    <aside class="text-black flex overflow-x-scroll md:overflow-auto   md:flex-col p-2 gap-5 md:gap-5 bg-red-400">
-        <button class="cursor-pointer" id="todosBtn">Todos</button>
-        <button class="cursor-pointer" id="desparasitantesBtn">Desparasitantes</button>
-        <button class="cursor-pointer" id="antibioticosBtn">Antibióticos</button>
-        <button class="cursor-pointer" id="analgesicosBtn">Analgésicos</button>
-        <button class="cursor-pointer" id="antiflamatoriosBtn">Antiflamatorios</button>
-        <button class="cursor-pointer" id="cardiacosBtn">Cardiacos</button>
-        <button class="cursor-pointer" id="oftalmicosBtn">Oftálmicos</button>
-        <button class="cursor-pointer" id="farmaciaBtn">Farmacia veterinaria</button>
-        <button class="cursor-pointer" id="diureticoBtn">Diurético</button>
+<main class="md:grid md:grid-cols-4">
+  <!-- ASIDE: sticky en md+, horizontal en mobile -->
+  <aside class="text-white md:text-xl flex overflow-x-scroll md:overflow-auto md:flex-col p-2 gap-5 md:gap-5 bg-secondary md:sticky md:top-20 md:h-fit">
+    <button class="cursor-pointer" id="todosBtn">Todos</button>
+    <button class="cursor-pointer" id="desparasitantesBtn">Desparasitantes</button>
+    <button class="cursor-pointer" id="antibioticosBtn">Antibióticos</button>
+    <button class="cursor-pointer" id="analgesicosBtn">Analgésicos</button>
+    <button class="cursor-pointer" id="antiflamatoriosBtn">Antiflamatorios</button>
+    <button class="cursor-pointer" id="cardiacosBtn">Cardiacos</button>
+    <button class="cursor-pointer" id="oftalmicosBtn">Oftálmicos</button>
+    <button class="cursor-pointer" id="farmaciaBtn">Farmacia veterinaria</button>
+    <button class="cursor-pointer" id="diureticoBtn">Diurético</button>
+  </aside>
 
-    </aside>
-    <section class="col-span-3">
-            <div class="card-products-container bg-primary-light">
-                <div id="shopContent" class="grid grid-cols-2 md:grid-cols-3 "></div>
-            </div>
-    </section>
-    
+  <!-- SECTION: contenido principal -->
+  <section class="col-span-3">
+    <div class="contenedor-busqued flex justify-center mt-5 mb-5">
+      <input type="text" id="inputBusqueda" placeholder="Buscar producto..."
+             class="w-[90%] m-2 text-black placeholder:text-gray-400 p-2 border-2 border-gray-200">
+    </div>
+    <p id="noResultados" class="text-white bg-red-400 text-center font-titulo font-bold p-5 m-5 hidden">
+      No se encontraron resultados
+    </p>
+
+    <div class="card-products-container bg-primary-light">
+      <div id="shopContent" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
+    </div>
+  </section>
 </main>
+
 
 <footer class="bg-secondary">
 <div class="flex flex-col p-5 lg:grid lg:grid-cols-4 lg:gap-8 lg:items-start">

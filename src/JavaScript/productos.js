@@ -7,6 +7,9 @@ const oftalmicosBtn = document.getElementById("oftalmicosBtn");
 const farmaciaBtn = document.getElementById("farmaciaBtn");
 const diureticoBtn = document.getElementById("diureticoBtn");
 const todosBtn = document.getElementById("todosBtn");
+const inputBusqueda = document.getElementById("inputBusqueda");
+const noResultados = document.getElementById("noResultados");
+
 
 const productos = [
     {
@@ -31,21 +34,21 @@ const productos = [
         boton: "Comprar"
     },
         {
-        productoNombre: "Amoxicilina y Ácido Clavulánico Spectrum",
+        productoNombre: "Amoxicilina",
         precio: 67,
         img: "https://lafarmascota.com/wp-content/uploads/2021/12/amoxicilina-acido-clavulanico-spectrum-400x400.jpg",
         categoria: "antibiotico",
         boton: "Comprar"
     },
     {
-        productoNombre: "Doxiciclina para perros Spectrum",
+        productoNombre: "Doxiciclina",
         precio: 85,
         img: "https://lafarmascota.com/wp-content/uploads/2024/01/doxicilina-400x400.jpg",
         categoria: "antibiotico",
         boton: "Comprar"
     },
     {
-        productoNombre: "Leidofs (gabapentina) 100 y 400 mg",
+        productoNombre: "Leidofs",
         precio: 100,
         img: "https://lafarmascota.com/wp-content/uploads/2021/08/leidofs400-400x400.jpg",
         categoria: "analgesico",
@@ -152,28 +155,42 @@ antiflamatoriosBtn.addEventListener("click", () =>{
     filtrarProductos("antiinflamatorio");
 })
 
-const mostrarProductos = (productosMostrar) => {
-    const shopContent = document.getElementById("shopContent");
-
-    shopContent.innerHTML = "";
-
-    productosMostrar.forEach(producto => {
-        const div = document.createElement("div");
-        div.className = "bg-white text-center m-2 p-2";
-        div.innerHTML = `
-        <img src="${producto.img}" class="w-full" alt="medicina">
-        <h3 class="text-xl text-primary"> ${producto.productoNombre}</h3>
-        <p class="text-secondary text-xl font-titulo"> $ ${producto.precio}</p>
-        <button class="text-white bg-primary w-50 p-2 cursor-pointer m-2 font-titulo text-lg font-bold hover:scale-105 hover:bg-secondary transition-all">${producto.boton}</button>
-        `
-        shopContent.append(div)
-    })
-}
-
 const filtrarProductos = (categoria) =>{
     const productosMostrar = productos.filter(producto => producto.categoria === categoria)
     mostrarProductos(productosMostrar)
 }
 
+const mostrarProductos = (productosMostrar) => {
+    const shopContent = document.getElementById("shopContent");
+
+    shopContent.innerHTML = "";
+
+    if(productosMostrar.length === 0){
+        noResultados.classList.remove("hidden");
+    } else{
+        noResultados.classList.add("hidden");
+    }
+
+    productosMostrar.forEach(producto => {
+        const div = document.createElement("div");
+        div.className = "bg-white shadow-lg text-center m-2 p-2";
+        div.innerHTML = `
+        <img src="${producto.img}" class="w-full" alt="medicina">
+        <h3 class="text-lg md:text-xl text-primary"> ${producto.productoNombre}</h3>
+        <p class="text-secondary text-xl font-titulo"> $ ${producto.precio}</p>
+        <button class="text-white bg-primary lg:w-50 p-2 cursor-pointer m-2 font-titulo text-lg font-bold hover:scale-105 hover:bg-secondary transition-all">${producto.boton}</button>
+        `
+        shopContent.append(div)
+    })
+}
 mostrarProductos(productos)
 
+const handleSearch = () => {
+    const terminoBusqueda = inputBusqueda.value.toLowerCase();
+    const productosFiltrados = productos.filter(producto =>
+        producto.productoNombre.toLowerCase().startsWith(terminoBusqueda)
+    );
+    mostrarProductos(productosFiltrados);
+};
+
+inputBusqueda.addEventListener("input", handleSearch);
