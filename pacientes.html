@@ -38,34 +38,48 @@
     </nav>
 </header>
 
-<main class="md:grid md:grid-cols-4">
-  <!-- ASIDE: sticky en md+, horizontal en mobile -->
-  <aside class="text-white md:text-xl flex overflow-x-scroll md:overflow-auto md:flex-col p-5 gap-5 md:gap-5 bg-primary md:sticky md:top-20 md:h-fit">
-    <button class="cursor-pointer hover:bg-secondary transition-all hover:scale-110" id="todosBtn">Todos</button>
-    <button class="cursor-pointer hover:bg-secondary transition-all hover:scale-110" id="desparasitantesBtn">Desparasitantes</button>
-    <button class="cursor-pointer hover:bg-secondary transition-all hover:scale-110" id="antibioticosBtn">Antibióticos</button>
-    <button class="cursor-pointer hover:bg-secondary transition-all hover:scale-110" id="analgesicosBtn">Analgésicos</button>
-    <button class="cursor-pointer hover:bg-secondary transition-all hover:scale-110" id="antiflamatoriosBtn">Antiflamatorios</button>
-    <button class="cursor-pointer hover:bg-secondary transition-all hover:scale-110" id="cardiacosBtn">Cardiacos</button>
-    <button class="cursor-pointer hover:bg-secondary transition-all hover:scale-110" id="oftalmicosBtn">Oftálmicos</button>
-    <button class="cursor-pointer hover:bg-secondary transition-all hover:scale-110" id="farmaciaBtn">Farmacia veterinaria</button>
-    <button class="cursor-pointer hover:bg-secondary transition-all hover:scale-110" id="diureticoBtn">Diurético</button>
-  </aside>
+<main class="bg-primary-light text-black">
+    <h2 class="text-4xl font-titulo font-black text-center p-5">Seguimiento Pacientes <span class="text-primary">PetCare</span></h2>
+    <div class="md:grid md:grid-cols-2 xl:grid-cols-3 gap-5 ">
+        <div class=" p-5 xl:col-span-1">
+            <div class="flex flex-col mb-5 items-center">
+                <h3 class="text-2xl font-bold font-titulo">Seguimiento Pacientes</h3>
+                <p class="mt-2">Añade Pacientes y <span class="text-primary font-bold">Administralos</span></p>
+            </div>
 
-  <!-- SECTION: contenido principal -->
-  <section class="col-span-3">
-    <div class="contenedor-busqued flex justify-center mt-5 mb-5">
-      <input type="text" id="inputBusqueda" placeholder="Buscar producto..."
-             class="w-[90%] m-2 text-black placeholder:text-gray-400 p-2 border-2 border-gray-200">
-    </div>
-    <p id="noResultados" class="text-white bg-red-400 text-center font-titulo font-bold p-5 m-5 hidden">
-      No se encontraron resultados
-    </p>
+            <div class="bg-white rounded-xl shadow-xl">
+                <form action="" class="flex flex-col p-5">
+                    <label class="font-bold font-titulo" for="inputNombre">NOMBRE PACIENTE:</label>
+                    <input type="text"  class="border-2 border-gray-200 rounded-md p-2 mt-1 mb-1"  name="paciente" id="inputNombre" placeholder="Nombre Paciente">
 
-    <div class="card-products-container bg-primary-light">
-      <div id="shopContent" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
+                    <label class="font-bold font-titulo mt-2" for="inputPropietario">NOMBRE PROPIETARIO</label>
+                    <input type="text"  class="border-2 border-gray-200 rounded-md p-2 mt-1 mb-1"  name="propietario" id="inputPropietario" placeholder="Nombre Propietario">
+
+                    <label class="font-bold font-titulo mt-2" for="inputEmail">EMAIL CONTACTO</label>
+                    <input type="email" class="border-2 border-gray-200 rounded-md p-2 mt-1 mb-1"   name="email" id="inputEmail" placeholder="E-mail Contacto">
+
+                    <label class="font-bold font-titulo mt-2" for="inputFecha">FECHA ALTA</label>
+                    <input type="date"  class="border-2 border-gray-200 rounded-md p-2 mt-1 mb-1"  id="inputFecha" name="fecha">
+
+                    <label class="font-bold font-titulo mt-2" for="inputSintomas">SÍNTOMAS</label>
+                    <textarea name="sintomas" class="border-2 border-gray-200 rounded-md p-2 mt-1 mb-1 resize-y" id="inputSintomas" placeholder="Síntomas del Paciente"></textarea>
+
+                    <button class="bg-primary p-2 mt-5 text-white font-bold font-titulo cursor-pointer hover:bg-primary-hover transition-all" id="btnRegistrar">Registrar Paciente</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="p-5 col-span-2 bg-red">
+            <div class="flex flex-col mb-5 items-center">
+                <h3 class="text-2xl font-bold font-titulo">Listado Pacientes</h3>
+                <p>Administra tus <span class="text-primary font-bold font-titulo">Pacientes y Citas</span></p>
+            </div>
+            <div id="contenidoCitas" class="rounded-xl shadow-xl">
+
+            </div>
+        </div>
     </div>
-  </section>
+
 </main>
 
 
@@ -138,5 +152,5 @@
 
   </body>
   <script src="src/JavaScript/main.js"></script>
-  <script src="src/JavaScript/productos.js"></script>
+  <script src="src/JavaScript/seguimiento.js"></script>
 </html>
