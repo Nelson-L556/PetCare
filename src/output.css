@@ -8,6 +8,7 @@
       "Courier New", monospace;
     --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-400: oklch(70.7% 0.022 261.325);
@@ -659,6 +660,9 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .bg-yellow-500 {
+    background-color: var(--color-yellow-500);
+  }
   .object-contain {
     object-fit: contain;
   }
@@ -780,6 +784,9 @@
   }
   .text-primary {
     color: var(--color-primary);
+  }
+  .text-red-500 {
+    color: var(--color-red-500);
   }
   .text-secondary {
     color: var(--color-secondary);
@@ -1647,16 +1654,6 @@
       grid-column: span 1 / span 1;
     }
   }
-  .xl\:col-span-3 {
-    @media (width >= 80rem) {
-      grid-column: span 3 / span 3;
-    }
-  }
-  .xl\:grid {
-    @media (width >= 80rem) {
-      display: grid;
-    }
-  }
   .xl\:size-1\/2 {
     @media (width >= 80rem) {
       width: calc(1/2 * 100%);
@@ -1666,31 +1663,6 @@
   .xl\:w-150 {
     @media (width >= 80rem) {
       width: calc(var(--spacing) * 150);
-    }
-  }
-  .xl\:w-\[0\%\] {
-    @media (width >= 80rem) {
-      width: 0%;
-    }
-  }
-  .xl\:w-\[50\%\] {
-    @media (width >= 80rem) {
-      width: 50%;
-    }
-  }
-  .xl\:w-\[70\%\] {
-    @media (width >= 80rem) {
-      width: 70%;
-    }
-  }
-  .xl\:w-\[80\%\] {
-    @media (width >= 80rem) {
-      width: 80%;
-    }
-  }
-  .xl\:w-\[90\%\] {
-    @media (width >= 80rem) {
-      width: 90%;
     }
   }
   .xl\:grid-cols-3 {
