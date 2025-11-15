@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+  <link rel="shortcut icon" href="src/img/logo.png" type="image/x-icon">
+  <title>Registro</title>
+</head>
+<body class="flex flex-col min-h-screen text-blanco">
+  <header class="bg-primary">
+    <nav>
+      <div class="header top-0 left-0 flex items-center justify-between font-bold text-1 z-50">
+        <!-- Logo -->
+        <div>
+          <img src="src/img/logo.png" class="size-30" alt="Logo">
+        </div>
+
+        <!-- Enlaces -->
+        <div class="enlaces hidden md:flex items-center gap-5 md:flex-row flex-col justify-center w-full md:h-auto md:w-auto md:bg-transparent">
+          <a href="index.html" class="font-titulo">Inicio</a>
+          <a href="nosotros.html" class="font-titulo">Nosotros</a>
+          <a href="servicios.html" class="font-titulo">Servicios</a>
+          <a href="productos.html" class="font-titulo">Productos</a>
+          <a href="pacientes.html" class="font-titulo">Panel Veterinario</a>
+          <a href="sesion.html" class="font-titulo">Iniciar sesión</a>
+        </div>
+
+        <!-- Iconos menú -->
+        <div>
+          <svg class="size-15 menu cursor-pointer md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z"/>
+          </svg>
+          <svg class="size-15 menuCerrado cursor-pointer hidden md:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"/>
+          </svg>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+ <main class="grid grid-cols-1 md:grid-cols-2 flex-grow">
+  <div class="bg-secondary flex flex-col justify-center items-center p-8 text-center">
+    <h2 class="text-3xl mb-4">¡Unete a PetCare!</h2>
+    <p class="max-w-md">Crea tu cuenta y empieza a cuidar de tus mascotas con el respaldo que merecen. Accede a servicios personalizados, historial veterinario y mucho más.</p>
+    <img src="src/img/registro.png" alt="Imagen de una persona con carpeta" class="max-w-xs">
+  </div>
+
+  <div class="bg-gray-200 flex flex-col justify-center items-center p-8 text-black">
+    <h3 class="text-3xl mb-2 font-titulo text-primary">Crea tu cuenta</h3>
+    <p class="text-center max-w-md mb-6">Registra su información, agenda consultas y gestiona todo su cuidado desde una sola plataforma.</p>
+
+    <form action="" class="w-full max-w-sm">
+
+      <div>
+        <label for="nombre" class="block mb-3">Nombre:</label>
+
+        <!-- CONTENEDOR MODIFICADO -->
+        <div class="relative">
+          <input 
+            type="text" 
+            id="nombre" 
+            placeholder="Ingrese su nombre" 
+            class="peer bg-white w-full p-2 rounded shadow focus:outline-none"
+          >
+
+          <!-- BARRA ANIMADA -->
+          <span 
+            class="pointer-events-none absolute left-0 bottom-0 
+            h-[2px] w-0 bg-primary 
+            transition-all duration-300 
+            peer-focus:w-full">
+          </span>
+        </div>
+
+        <label for="contraseña" class="block mb-2 mt-5">Contraseña:</label>
+        <div class="relative">
+            <input 
+            type="text" 
+            id="nombre" 
+            placeholder="Ingrese su nombre" 
+            class="peer bg-white w-full p-2 rounded shadow focus:outline-none"
+          >
+
+          <!-- BARRA ANIMADA -->
+          <span 
+            class="pointer-events-none absolute left-0 bottom-0 
+            h-[2px] w-0 bg-primary 
+            transition-all duration-300 
+            peer-focus:w-full">
+          </span>
+        </div>
+
+        <button class="mt-5 bg-primary p-2 text-white w-full md:w-auto hover:scale-105 cursor-pointer transition-all hover:bg-primary-hover font-titulo">Registrate</button>
+      </div>
+
+      <div class="mt-5">
+        <p>¿Ya tienes una cuenta?<a href="sesion.html" class="text-blue-500"> Inicia Sesión</a></p>
+      </div>
+    </form>
+  </div>
+</main>
+
+
+  <script src="src/JavaScript/main.js"></script>
+  <script src="src/JavaScript/productos.js"></script>
+</body>
+</html>
