@@ -3,9 +3,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuCerrar = document.querySelector(".menuCerrado");
   const enlaces = document.querySelector(".enlaces");
   const header = document.querySelector(".header");
+  menuRol()
+
 
   menu.addEventListener("click", menuVisible);
   menuCerrar.addEventListener("click", menuInvisible);
+
+function menuRol() {
+  const rol = localStorage.getItem("Cuenta"); // "usuario" o "administrador"
+  console.log("Rol:", rol);
+
+  // Selecciona los enlaces específicos
+  const linkProductos = document.querySelector('a[href="productos.html"]');
+  const linkPanel = document.querySelector('a[href="pacientes.html"]');
+  const linkSesion = document.querySelector('a[href="sesion.html"]');
+
+  if (rol === "usuario") {
+    // Usuario normal: oculta panel veterinario
+    if (linkPanel) linkPanel.classList.add("hidden");
+    if (linkProductos) linkProductos.classList.remove("hidden");
+  } else if (rol === "administrador") {
+    // Administrador: oculta productos
+    if (linkProductos) linkProductos.classList.add("hidden");
+    if (linkPanel) linkPanel.classList.remove("hidden");
+  } else {
+    // Sin sesión: oculta ambos y muestra "Iniciar sesión"
+    if (linkProductos) linkProductos.classList.add("hidden");
+    if (linkPanel) linkPanel.classList.add("hidden");
+    if (linkSesion) linkSesion.classList.remove("hidden");
+  }
+  }
 
   function menuVisible() {
     // Mostrar enlaces en columna fullscreen
