@@ -18,19 +18,24 @@ function menuRol() {
   const linkPanel = document.querySelector('a[href="pacientes.html"]');
   const linkSesion = document.querySelector('a[href="sesion.html"]');
 
-  if (rol === "usuario") {
+  if (rol === "1") {
     // Usuario normal: oculta panel veterinario
-    if (linkPanel) linkPanel.classList.add("hidden");
+    if (linkPanel) linkPanel.classList.add("bg-red-500");
     if (linkProductos) linkProductos.classList.remove("hidden");
-  } else if (rol === "administrador") {
+  } else if (rol === "2") {
     // Administrador: oculta productos
-    if (linkProductos) linkProductos.classList.add("hidden");
+    if (linkProductos) linkProductos.classList.add("bg-blue-500");
     if (linkPanel) linkPanel.classList.remove("hidden");
   } else {
     // Sin sesión: oculta ambos y muestra "Iniciar sesión"
-    if (linkProductos) linkProductos.classList.add("hidden");
+    if (linkProductos) linkProductos.classList.add("bg-green-500");
     if (linkPanel) linkPanel.classList.add("hidden");
     if (linkSesion) linkSesion.classList.remove("hidden");
+  }
+
+  function cerrarSecion(){
+    localStorage.removeItem("email")
+    localStorage.removeItem("Cuenta")
   }
   }
 
