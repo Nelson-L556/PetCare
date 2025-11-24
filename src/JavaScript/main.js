@@ -10,32 +10,57 @@ document.addEventListener("DOMContentLoaded", () => {
   menuCerrar.addEventListener("click", menuInvisible);
 
 function menuRol() {
-  const rol = localStorage.getItem("Cuenta"); // "usuario" o "administrador"
+  const rol = localStorage.getItem("Cuenta");
+  const cuenta = localStorage.getItem("email");
   console.log("Rol:", rol);
+  console.log(cuenta);
 
   // Selecciona los enlaces específicos
-  const linkProductos = document.querySelector('a[href="productos.html"]');
-  const linkPanel = document.querySelector('a[href="pacientes.html"]');
-  const linkSesion = document.querySelector('a[href="sesion.html"]');
+  const linkProductos = document.getElementById('navProductos');
+  const linkPanel = document.getElementById("navPanel");
+  const linkSesion = document.getElementById('navSesion');
 
   if (rol === "1") {
-    // Usuario normal: oculta panel veterinario
+    // Usuario adminstrador
     if (linkPanel) linkPanel.classList.add("bg-red-500");
     if (linkProductos) linkProductos.classList.remove("hidden");
+    if (linkSesion) linkSesion.classList.add("hidden")
+    cerrarSesion()
+
   } else if (rol === "2") {
-    // Administrador: oculta productos
-    if (linkProductos) linkProductos.classList.add("bg-blue-500");
-    if (linkPanel) linkPanel.classList.remove("hidden");
+    // Usuario
+    if (linkPanel) linkPanel.classList.add("hidden");
+    if (linkSesion) linkSesion.classList.add("hidden")
+    cerrarSesion()
   } else {
     // Sin sesión: oculta ambos y muestra "Iniciar sesión"
-    if (linkProductos) linkProductos.classList.add("bg-green-500");
+    if (linkProductos) linkProductos.classList.add("hidden");
     if (linkPanel) linkPanel.classList.add("hidden");
     if (linkSesion) linkSesion.classList.remove("hidden");
   }
 
-  function cerrarSecion(){
-    localStorage.removeItem("email")
-    localStorage.removeItem("Cuenta")
+  function cerrarSesion(){
+    const navegacion = document.getElementById("nav");
+    const cerraCuenta = document.createElement("button")
+    cerraCuenta.classList.add("text-withe", "cursor-pointer", "flex")
+    cerraCuenta.innerHTML = `<div class="relative" id="navNosotros">
+            <button class="font-titulo cursor-pointer flex peer relative rounded">${cuenta} <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg></button>
+            <span 
+              class="pointer-events-none absolute left-0 bottom-0
+              h-[2px] w-0 bg-white 
+              transition-all duration-300 
+              peer-hover:w-full">
+            </span>
+          </div>`
+    navegacion.appendChild(cerraCuenta)
+    console.log(cerraCuenta)
+
+    cerraCuenta.addEventListener("click", () =>{
+      localStorage.removeItem("Cuenta")
+      localStorage.removeItem("rol")
+      window.location.href = "index.html";
+
+    })
   }
   }
 

@@ -17,13 +17,66 @@
         </div>
 
         <!-- Enlaces -->
-        <div class="enlaces hidden md:flex items-center gap-5 md:flex-row flex-col justify-center w-full md:h-auto md:w-auto md:bg-transparent">
-            <a href="index.html" class="font-titulo">Inicio</a>
-            <a href="nosotros.html" class="font-titulo">Nosotros</a>
-            <a href="servicios.html" class="font-titulo">Servicios</a>
-            <a href="productos.html" class="font-titulo">Productos</a>
-            <a href="pacientes.html" class="font-titulo">Panel Veterinario</a>
-            <a href="sesion.html" class="font-titulo">Iniciar sesión</a>
+        <div class="enlaces hidden md:flex items-center gap-5 md:flex-row flex-col justify-center w-full md:h-auto md:w-auto md:bg-transparent" id="nav">
+            <div class="relative" id="navInicio">
+                <a href="index.html" class="font-titulo peer relative rounded">Inicio</a>
+                <span 
+                class=" absolute left-0 bottom-0 
+                h-[2px] w-0 bg-white 
+                transition-all duration-300 
+                peer-hover:w-full">
+                </span>
+            </div>
+
+            <div class="relative" id="navNosotros">
+                <a href="nosotros.html" class="font-titulo peer relative rounded">Nosotros</a>
+                <span 
+                class="pointer-events-none absolute left-0 bottom-0
+                h-[2px] w-0 bg-white 
+                transition-all duration-300 
+                peer-hover:w-full">
+                </span>
+            </div>
+
+            <div class="relative" id="navServicios">
+                <a href="servicios.html" class="font-titulo peer  relative rounded">Servicios</a>
+                <span 
+                class="pointer-events-none absolute left-0 bottom-0 
+                h-[2px] w-0 bg-white 
+                transition-all duration-300 
+                peer-hover:w-full">
+                </span>
+            </div>
+
+            <div class="relative" id="navProductos">
+                <a href="productos.html" class="font-titulo peer  relative rounded">Productos</a>
+                <span
+                class="pointer-events-none absolute left-0 bottom-0 
+                h-[2px] w-0 bg-white 
+                transition-all duration-300 
+                peer-hover:w-full">
+                </span>
+            </div>
+
+            <div class="relative" id="navPanel">
+                <a href="pacientes.html" class="font-titulo peer  relative rounded">Panel Veterinario</a>
+                <span 
+                class="pointer-events-none absolute left-0 bottom-0 
+                h-[2px] w-0 bg-white 
+                transition-all duration-300 
+                peer-hover:w-full">
+                </span>
+            </div>
+
+            <div class="relative" id="navSesion">
+                <a href="sesion.html" class="font-titulo peer  relative rounded">Iniciar Sesión</a>
+                <span 
+                class="pointer-events-none absolute left-0 bottom-0 
+                h-[2px] w-0 bg-white 
+                transition-all duration-300 
+                peer-hover:w-full">
+                </span>
+            </div>
         </div>
 
         <!-- Iconos menú -->
