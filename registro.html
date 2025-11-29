@@ -109,8 +109,28 @@
     <form action="" id="formulario" class="w-full max-w-sm">
 
       <div>
-        <label for="email" class="block mb-3">Correo Electronico:</label>
+
+        <label for="nombre" class="block mb-3">Nombre</label>
         <!-- CONTENEDOR MODIFICADO -->
+        <div class="relative">
+          <input 
+            type="text"
+            id="nombre"
+            placeholder="Ingrese su nombre" 
+            class="peer bg-white w-full p-2 rounded shadow focus:outline-none">
+
+          <!-- BARRA ANIMADA -->
+          <span 
+            class="pointer-events-none absolute left-0 bottom-0 
+            h-[2px] w-0 bg-primary 
+            transition-all duration-300 
+            peer-focus:w-full">
+          </span>
+        </div>
+
+        <label for="contraseña" class="block mb-2 mt-5">Email:</label>
+
+
         <div class="relative">
           <input 
             type="email"

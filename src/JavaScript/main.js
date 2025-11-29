@@ -12,8 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
 function menuRol() {
   const rol = localStorage.getItem("Cuenta");
   const cuenta = localStorage.getItem("email");
+  const nombre = localStorage.getItem("nombre");
   console.log("Rol:", rol);
   console.log(cuenta);
+  console.log(nombre);
 
   // Selecciona los enlaces específicos
   const linkProductos = document.getElementById('navProductos');
@@ -22,7 +24,6 @@ function menuRol() {
 
   if (rol === "1") {
     // Usuario adminstrador
-    if (linkPanel) linkPanel.classList.add("bg-red-500");
     if (linkProductos) linkProductos.classList.remove("hidden");
     if (linkSesion) linkSesion.classList.add("hidden")
     cerrarSesion()
@@ -44,7 +45,7 @@ function menuRol() {
     const cerraCuenta = document.createElement("button")
     cerraCuenta.classList.add("text-withe", "cursor-pointer", "flex")
     cerraCuenta.innerHTML = `<div class="relative" id="navNosotros">
-            <button class="font-titulo cursor-pointer flex peer relative rounded">${cuenta} <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg></button>
+            <button class="font-titulo cursor-pointer flex peer relative rounded">${nombre} <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg></button>
             <span 
               class="pointer-events-none absolute left-0 bottom-0
               h-[2px] w-0 bg-white 

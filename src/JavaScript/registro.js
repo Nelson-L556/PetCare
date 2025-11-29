@@ -16,10 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
             mensajeAnterior.remove()
         }
 
+        const nombre = document.getElementById("nombre").value;
         const email = document.getElementById("email").value;
         const password = document.getElementById("contraseña").value;
 
-        if(email=== "" || password=== "" || tipoCuenta===""){
+        if(nombre==="" || email=== "" || password=== "" || tipoCuenta===""){
         const mensaje = document.createElement("p")
         mensaje.textContent = "Todos los campos son obligatorios"
         mensaje.classList.add("bg-red-500", "p-2", "text-white", "text-center", "font-bold", "font-titulo", "mt-2", "mensaje-feedback")
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
             mensaje.remove()
         }, 3000);
         } else{ 
-            crearCliente(email, password, tipoCuenta);
+            crearCliente(nombre,email, password, tipoCuenta);
         }
         
     })
@@ -59,6 +60,7 @@ function petcareDB(){
         });
 
         // Definir las columnas
+        objectStore.createIndex("nombre", "nombre", {unique: false})
         objectStore.createIndex("email", "email", {unique: true} );
         objectStore.createIndex("password", "password", {unique: false} );
         objectStore.createIndex("tipoCuenta", "tipoCuenta", {unique: false} );
@@ -67,7 +69,7 @@ function petcareDB(){
     }
 }
 
-function crearCliente(email, password, tipoCuenta){
+function crearCliente(nombre, email, password, tipoCuenta){
     let transaction = db.transaction(["usuarios"], "readwrite");
 
     transaction.oncomplete = function(){
@@ -80,9 +82,9 @@ function crearCliente(email, password, tipoCuenta){
 
     const objectStore = transaction.objectStore("usuarios");
 
-    const nuevoRegistro = {email, password, tipoCuenta}
+    const nuevoRegistro = {nombre, email, password, tipoCuenta}
     
-
+    
     const peticion = objectStore.add(nuevoRegistro);
 
     peticion.onsuccess = () => {
@@ -90,6 +92,7 @@ function crearCliente(email, password, tipoCuenta){
         const mensaje = document.createElement("p")
         mensaje.textContent = "Usuario agregado correctamente"
         mensaje.classList.add("bg-green-500", "p-2", "text-white", "text-center", "font-bold", "font-titulo", "mt-2", "mensaje-feedback")
+        localStorage.setItem("nombre", nombre)
         formulario.appendChild(mensaje);
         setTimeout(() => {
             window.location.href = "sesion.html";

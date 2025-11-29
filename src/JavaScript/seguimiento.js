@@ -7,6 +7,13 @@ const btnRegistrar = document.getElementById("btnRegistrar");
 const formulario = document.getElementById("form");
 const contenidoCitas = document.getElementById("contenidoCitas");
 
+let db;
+document.addEventListener("DOMContentLoaded", () => {
+  petcareDB();
+  cargarPacientesLocal();
+  setTimeout(() => cargarPacientesDB(), 500); // espera a que abra la BD
+});
+
 btnRegistrar.addEventListener("click", (e) => {
   e.preventDefault();
   validarFormulario();
@@ -28,19 +35,26 @@ function validarFormulario() {
     return;
   }
 
-  // Crear card y agregarla al listado
-  const card = crearCard({
+  const paciente = {
     nombre: inputNombre.value.trim(),
     propietario: inputPropietario.value.trim(),
     email: inputEmail.value.trim(),
     fecha: inputFecha.value.trim(),
     sintomas: inputSintomas.value.trim(),
-  });
+  };
 
+  // Crear card y agregarla al listado
+  const card = crearCard(paciente);
   contenidoCitas.appendChild(card);
+
+  // Guardar en LocalStorage
+  guardarPacienteLocal(paciente);
+
+  // Guardar en IndexedDB
+  guardarPacienteDB(paciente);
+
   feedback("Se registró correctamente", "bg-green-500");
 
-  // Limpiar formulario
   formulario.reset();
 }
 
@@ -62,7 +76,6 @@ function feedback(texto, colorClase) {
 }
 
 function crearCard({ nombre, propietario, email, fecha, sintomas }) {
-  // Contenedor de la card
   const card = document.createElement("div");
   card.classList.add(
     "bg-white",
@@ -72,10 +85,9 @@ function crearCard({ nombre, propietario, email, fecha, sintomas }) {
     "flex",
     "flex-col",
     "gap-2",
-    "mb-5" // margen entre cards
+    "mb-5"
   );
 
-  // Contenido
   card.appendChild(linea("Paciente:", nombre));
   card.appendChild(linea("Propietario:", propietario));
   card.appendChild(linea("Email:", email));
@@ -90,9 +102,9 @@ function crearCard({ nombre, propietario, email, fecha, sintomas }) {
   btnEliminar.classList.add(
     "bg-red-500",
     "p-2",
-    'flex',
-    'items-center',
-    'gap-2',
+    "flex",
+    "items-center",
+    "gap-2",
     "justify-center",
     "cursor-pointer",
     "hover:bg-red-600",
@@ -105,41 +117,42 @@ function crearCard({ nombre, propietario, email, fecha, sintomas }) {
     "transition-all",
     "w-full"
   );
-  btnEliminar.innerHTML = 'Eliminar <svg fill="none" class="h-5 w-5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>'
-
+  btnEliminar.textContent = "Eliminar";
   btnEliminar.addEventListener("click", () => {
     card.remove();
+    eliminarPacienteLocal(email);
+    eliminarPacienteDB(email);
   });
 
   const btnEditar = document.createElement("button");
   btnEditar.classList.add(
-  "bg-blue-500",
-  "p-2",
-  'flex',
-  'items-center',
-  'gap-2', "justify-center",
-  "cursor-pointer",
-  "hover:bg-blue-600",
-  "text-white",
-  "font-bold",
-  "font-titulo",
-  "text-center",
-  "md:w-1/2",
-  "hover:scale-102",
-  "transition-all",
-  "w-full"
+    "bg-blue-500",
+    "p-2",
+    "flex",
+    "items-center",
+    "gap-2",
+    "justify-center",
+    "cursor-pointer",
+    "hover:bg-blue-600",
+    "text-white",
+    "font-bold",
+    "font-titulo",
+    "text-center",
+    "md:w-1/2",
+    "hover:scale-102",
+    "transition-all",
+    "w-full"
   );
-  btnEditar.innerHTML = 'Editar <svg fill="none" class="h-5 w-5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>'
-  
+  btnEditar.textContent = "Editar";
   btnEditar.addEventListener("click", () => {
-    // Rellenar formulario para edición simple
     inputNombre.value = nombre;
     inputPropietario.value = propietario;
     inputEmail.value = email;
     inputFecha.value = fecha;
     inputSintomas.value = sintomas;
-    // Opcional: eliminar la card antigua al editar
     card.remove();
+    eliminarPacienteLocal(email);
+    eliminarPacienteDB(email);
   });
 
   acciones.appendChild(btnEliminar);
@@ -154,4 +167,95 @@ function linea(label, valor) {
   p.innerHTML = `<span class="font-bold">${label}</span> ${valor}`;
   p.classList.add("text-black");
   return p;
+}
+
+/* ---------------- LOCALSTORAGE ---------------- */
+function guardarPacienteLocal(paciente) {
+  let pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
+  pacientes.push(paciente);
+  localStorage.setItem("pacientes", JSON.stringify(pacientes));
+}
+
+function cargarPacientesLocal() {
+  let pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
+  pacientes.forEach(p => {
+    const card = crearCard(p);
+    contenidoCitas.appendChild(card);
+  });
+}
+
+function eliminarPacienteLocal(email) {
+  let pacientes = JSON.parse(localStorage.getItem("pacientes")) || [];
+  pacientes = pacientes.filter(p => p.email !== email);
+  localStorage.setItem("pacientes", JSON.stringify(pacientes));
+}
+
+/* ---------------- INDEXEDDB ---------------- */
+function petcareDB() {
+  let petcareDB = window.indexedDB.open("petcare", 1);
+
+  petcareDB.onerror = function () {
+    console.log("Hubo un error al crear la base de datos");
+  };
+
+  petcareDB.onsuccess = function (e) {
+    db = e.target.result;
+    console.log("Base de datos abierta!!");
+  };
+
+  petcareDB.onupgradeneeded = function (e) {
+    const db = e.target.result;
+
+    if (!db.objectStoreNames.contains("pacientes")) {
+      const objectStore = db.createObjectStore("pacientes", {
+        keyPath: "id",
+        autoIncrement: true,
+      });
+
+      objectStore.createIndex("nombre", "nombre", { unique: false });
+      objectStore.createIndex("email", "email", { unique: false });
+      objectStore.createIndex("propietario", "propietario", { unique: false });
+      objectStore.createIndex("fecha", "fecha", { unique: false });
+      objectStore.createIndex("sintomas", "sintomas", { unique: false });
+    }
+  };
+}
+
+function guardarPacienteDB(paciente) {
+  let transaction = db.transaction(["pacientes"], "readwrite");
+  const objectStore = transaction.objectStore("pacientes");
+  objectStore.add(paciente);
+
+  transaction.oncomplete = () => {
+    console.log("Paciente guardado en IndexedDB");
+  };
+}
+
+function cargarPacientesDB() {
+  const transaction = db.transaction(["pacientes"], "readonly");
+  const objectStore = transaction.objectStore("pacientes");
+  const request = objectStore.getAll();
+
+  request.onsuccess = () => {
+    const pacientes = request.result;
+    pacientes.forEach(p => {
+      const card = crearCard(p);
+      contenidoCitas.appendChild(card);
+    });
+  };
+}
+
+function eliminarPacienteDB(email) {
+  const transaction = db.transaction(["pacientes"], "readwrite");
+  const objectStore = transaction.objectStore("pacientes");
+  const index = objectStore.index("email");
+  const request = index.get(email);
+
+  request.onsuccess = () => {
+    const paciente = request.result;
+    if (paciente) {
+      objectStore.delete(paciente.id);
+      console.log("Paciente eliminado de IndexedDB");
+    }
+  };
 }
