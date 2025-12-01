@@ -96,7 +96,7 @@ function crearCard({ nombre, propietario, email, fecha, sintomas }) {
 
   // Botones
   const acciones = document.createElement("div");
-  acciones.classList.add("flex", "gap-2", "mt-3", "w-full");
+  acciones.classList.add("flex", "gap-2", "mt-3", "w-full", "xl:w-1/2");
 
   const btnEliminar = document.createElement("button");
   btnEliminar.classList.add(
@@ -117,7 +117,7 @@ function crearCard({ nombre, propietario, email, fecha, sintomas }) {
     "transition-all",
     "w-full"
   );
-  btnEliminar.textContent = "Eliminar";
+  btnEliminar.innerHTML = 'Eliminar <svg fill="none" class="h-5 w-5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>'
   btnEliminar.addEventListener("click", () => {
     card.remove();
     eliminarPacienteLocal(email);
@@ -143,7 +143,7 @@ function crearCard({ nombre, propietario, email, fecha, sintomas }) {
     "transition-all",
     "w-full"
   );
-  btnEditar.textContent = "Editar";
+  btnEditar.innerHTML = 'Editar <svg fill="none" class="h-5 w-5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>'
   btnEditar.addEventListener("click", () => {
     inputNombre.value = nombre;
     inputPropietario.value = propietario;
